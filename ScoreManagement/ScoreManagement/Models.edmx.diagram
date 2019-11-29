@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="ScoreManagementModel.LOP" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ScoreManagementModel.MONHOC" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ScoreManagementModel.SVIEN" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ScoreManagementModel.DIEM" Width="1.5" PointX="7.5" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="ScoreManagementModel.DIEM" Width="1.5" PointX="7.75" PointY="3" IsExpanded="true" />
         <AssociationConnector Association="ScoreManagementModel.FK__LOP__MAKHOA__276EDEB3" ManuallyRouted="false" />
         <AssociationConnector Association="ScoreManagementModel.FK__MONHOC__MAKHOA__2C3393D0" ManuallyRouted="false" />
         <AssociationConnector Association="ScoreManagementModel.FK__SVIEN__MAKHOA__29572725" ManuallyRouted="false" />
