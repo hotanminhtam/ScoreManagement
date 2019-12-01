@@ -20,7 +20,7 @@ namespace ScoreManagement
 
         private void BtnStart_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             ScoreManagement.FacultyManagement.IndexForm index = new FacultyManagement.IndexForm();
             index.Show();
         }
