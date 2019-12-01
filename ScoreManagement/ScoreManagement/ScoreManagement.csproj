@@ -73,11 +73,23 @@
     <Compile Include="DIEM.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="FacultyManagement\CreateClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacultyManagement\CreateClass.Designer.cs">
+      <DependentUpon>CreateClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="FacultyManagement\CreateForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FacultyManagement\CreateForm.Designer.cs">
       <DependentUpon>CreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyManagement\CreateStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacultyManagement\CreateStudent.Designer.cs">
+      <DependentUpon>CreateStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="FacultyManagement\IndexForm.cs">
       <SubType>Form</SubType>
@@ -86,6 +98,12 @@
       <DependentUpon>IndexForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FacultyManagement\Logic.cs" />
+    <Compile Include="FacultyManagement\UpdateClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacultyManagement\UpdateClass.Designer.cs">
+      <DependentUpon>UpdateClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="FacultyManagement\UpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,11 +145,20 @@
     <Compile Include="SVIEN.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FacultyManagement\CreateClass.resx">
+      <DependentUpon>CreateClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FacultyManagement\CreateForm.resx">
       <DependentUpon>CreateForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FacultyManagement\CreateStudent.resx">
+      <DependentUpon>CreateStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FacultyManagement\IndexForm.resx">
       <DependentUpon>IndexForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacultyManagement\UpdateClass.resx">
+      <DependentUpon>UpdateClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FacultyManagement\UpdateForm.resx">
       <DependentUpon>UpdateForm.cs</DependentUpon>
