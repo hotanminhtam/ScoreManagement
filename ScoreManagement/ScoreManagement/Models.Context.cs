@@ -25,10 +25,10 @@ namespace ScoreManagement
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<DIEM> DIEMs { get; set; }
         public virtual DbSet<KHOA> KHOAs { get; set; }
         public virtual DbSet<LOP> LOPs { get; set; }
         public virtual DbSet<MONHOC> MONHOCs { get; set; }
         public virtual DbSet<SVIEN> SVIENs { get; set; }
-        public virtual DbSet<DIEM> DIEMs { get; set; }
     }
 }

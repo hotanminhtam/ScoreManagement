@@ -26,8 +26,8 @@ namespace ScoreManagement
         public Nullable<System.TimeSpan> GIOHOC { get; set; }
         public Nullable<int> MAKHOA { get; set; }
     
-        public virtual KHOA KHOA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DIEM> DIEMs { get; set; }
+        public virtual KHOA KHOA { get; set; }
     }
 }

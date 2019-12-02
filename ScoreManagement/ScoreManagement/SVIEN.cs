@@ -30,9 +30,9 @@ namespace ScoreManagement
         public string EMAIL { get; set; }
         public string DIACHI { get; set; }
     
-        public virtual KHOA KHOA { get; set; }
-        public virtual LOP LOP { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DIEM> DIEMs { get; set; }
+        public virtual KHOA KHOA { get; set; }
+        public virtual LOP LOP { get; set; }
     }
 }

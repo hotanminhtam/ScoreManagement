@@ -30,5 +30,25 @@ namespace ScoreManagement.FacultyManagement
             db.KHOAs.Add(fac);
             db.SaveChanges();
         }
+
+        public void DeleteFaculty (int makhoa)
+        {
+            var db = new ScoreManagementEntities();
+            var fac = db.KHOAs.Find(makhoa);
+            db.KHOAs.Remove(fac);
+            db.SaveChanges();
+        }
+
+        public void EditFaculty(int id, int makhoa, string tenkhoa)
+        {
+            var db = new ScoreManagementEntities();
+            var oldFac = db.KHOAs.Find(id);
+
+            oldFac.MAKHOA = makhoa;
+            oldFac.TENKHOA = tenkhoa;
+
+            db.Entry(oldFac).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+        }
     }
 }

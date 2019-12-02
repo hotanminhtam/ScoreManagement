@@ -31,7 +31,14 @@ namespace ScoreManagement.FacultyManagement
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if(this.grdFaculty.SelectedRows.Count == 1)
+            {
+                if(MessageBox.Show("Do you want delete?", "Confirm", MessageBoxButtons.YesNo)
+                    == DialogResult.Yes)
+                {
+
+                }
+            }
         }
 
         private void BtnCreate_Click(object sender, EventArgs e)

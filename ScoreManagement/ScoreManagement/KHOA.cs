@@ -22,6 +22,7 @@ namespace ScoreManagement
             this.SVIENs = new HashSet<SVIEN>();
         }
     
+        public int ID { get; set; }
         public int MAKHOA { get; set; }
         public string TENKHOA { get; set; }
     
