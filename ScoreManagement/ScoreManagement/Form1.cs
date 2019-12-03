@@ -20,9 +20,10 @@ namespace ScoreManagement
 
         private void BtnStart_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
             ScoreManagement.FacultyManagement.IndexForm index = new FacultyManagement.IndexForm();
             index.Show();
+            index.Owner = this;
         }
     }
 }

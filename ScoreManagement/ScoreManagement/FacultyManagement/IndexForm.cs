@@ -22,6 +22,15 @@ namespace ScoreManagement.FacultyManagement
             this.btnCreate.Click += BtnCreate_Click;
             this.btnDelete.Click += BtnDelete_Click;
             this.grdFaculty.DoubleClick += GrdFaculty_DoubleClick;
+            this.btnBack.Click += BtnBack_Click;
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            var temp = this.Owner;
+            temp.RemoveOwnedForm(this);
+            this.Close();
+            temp.Show();
         }
 
         private void GrdFaculty_DoubleClick(object sender, EventArgs e)

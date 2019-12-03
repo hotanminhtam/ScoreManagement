@@ -205,5 +205,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ClassManagement\" />
+    <Folder Include="NameManagement\" />
+    <Folder Include="ScoreManagement\" />
+    <Folder Include="SubjectManagement\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
