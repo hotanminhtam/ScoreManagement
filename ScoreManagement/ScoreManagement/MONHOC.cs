@@ -20,6 +20,7 @@ namespace ScoreManagement
             this.DIEMs = new HashSet<DIEM>();
         }
     
+        public int ID { get; set; }
         public int MAMH { get; set; }
         public string TENMH { get; set; }
         public Nullable<int> TINCHI { get; set; }

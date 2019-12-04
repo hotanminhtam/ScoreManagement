@@ -10,6 +10,7 @@
             <PropertyRef Name="MASV" />
             <PropertyRef Name="MAMH" />
           </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MASV" Type="int" Nullable="false" />
           <Property Name="MAMH" Type="int" Nullable="false" />
           <Property Name="CHUYENCAN" Type="int" />
@@ -30,6 +31,7 @@
           <Key>
             <PropertyRef Name="MALOP" />
           </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MALOP" Type="int" Nullable="false" />
           <Property Name="TENLOP" Type="nvarchar" MaxLength="20" />
           <Property Name="MAKHOA" Type="int" />
@@ -38,6 +40,7 @@
           <Key>
             <PropertyRef Name="MAMH" />
           </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MAMH" Type="int" Nullable="false" />
           <Property Name="TENMH" Type="nvarchar" MaxLength="20" />
           <Property Name="TINCHI" Type="int" />
@@ -48,6 +51,7 @@
           <Key>
             <PropertyRef Name="MASV" />
           </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MASV" Type="int" Nullable="false" />
           <Property Name="TENSV" Type="nvarchar" MaxLength="50" />
           <Property Name="MALOP" Type="int" />
@@ -58,7 +62,7 @@
           <Property Name="EMAIL" Type="nvarchar(max)" />
           <Property Name="DIACHI" Type="nvarchar(max)" />
         </EntityType>
-        <Association Name="FK__DIEM__MAMH__2F10007B">
+        <Association Name="FK__DIEM__MAMH__656C112C">
           <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="1" />
           <End Role="DIEM" Type="Self.DIEM" Multiplicity="*" />
           <ReferentialConstraint>
@@ -70,7 +74,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DIEM__MASV__2E1BDC42">
+        <Association Name="FK__DIEM__MASV__6A30C649">
           <End Role="SVIEN" Type="Self.SVIEN" Multiplicity="1" />
           <End Role="DIEM" Type="Self.DIEM" Multiplicity="*" />
           <ReferentialConstraint>
@@ -82,7 +86,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__LOP__MAKHOA__49C3F6B7">
+        <Association Name="FK__LOP__MAKHOA__60A75C0F">
           <End Role="KHOA" Type="Self.KHOA" Multiplicity="0..1" />
           <End Role="LOP" Type="Self.LOP" Multiplicity="*" />
           <ReferentialConstraint>
@@ -94,7 +98,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MONHOC__MAKHOA__4BAC3F29">
+        <Association Name="FK__MONHOC__MAKHOA__6477ECF3">
           <End Role="KHOA" Type="Self.KHOA" Multiplicity="0..1" />
           <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="*" />
           <ReferentialConstraint>
@@ -106,7 +110,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SVIEN__MAKHOA__4AB81AF0">
+        <Association Name="FK__SVIEN__MAKHOA__68487DD7">
           <End Role="KHOA" Type="Self.KHOA" Multiplicity="0..1" />
           <End Role="SVIEN" Type="Self.SVIEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -118,7 +122,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SVIEN__MALOP__286302EC">
+        <Association Name="FK__SVIEN__MALOP__693CA210">
           <End Role="LOP" Type="Self.LOP" Multiplicity="0..1" />
           <End Role="SVIEN" Type="Self.SVIEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -136,27 +140,27 @@
           <EntitySet Name="LOP" EntityType="Self.LOP" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MONHOC" EntityType="Self.MONHOC" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SVIEN" EntityType="Self.SVIEN" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__DIEM__MAMH__2F10007B" Association="Self.FK__DIEM__MAMH__2F10007B">
+          <AssociationSet Name="FK__DIEM__MAMH__656C112C" Association="Self.FK__DIEM__MAMH__656C112C">
             <End Role="MONHOC" EntitySet="MONHOC" />
             <End Role="DIEM" EntitySet="DIEM" />
           </AssociationSet>
-          <AssociationSet Name="FK__DIEM__MASV__2E1BDC42" Association="Self.FK__DIEM__MASV__2E1BDC42">
+          <AssociationSet Name="FK__DIEM__MASV__6A30C649" Association="Self.FK__DIEM__MASV__6A30C649">
             <End Role="SVIEN" EntitySet="SVIEN" />
             <End Role="DIEM" EntitySet="DIEM" />
           </AssociationSet>
-          <AssociationSet Name="FK__LOP__MAKHOA__49C3F6B7" Association="Self.FK__LOP__MAKHOA__49C3F6B7">
+          <AssociationSet Name="FK__LOP__MAKHOA__60A75C0F" Association="Self.FK__LOP__MAKHOA__60A75C0F">
             <End Role="KHOA" EntitySet="KHOA" />
             <End Role="LOP" EntitySet="LOP" />
           </AssociationSet>
-          <AssociationSet Name="FK__MONHOC__MAKHOA__4BAC3F29" Association="Self.FK__MONHOC__MAKHOA__4BAC3F29">
+          <AssociationSet Name="FK__MONHOC__MAKHOA__6477ECF3" Association="Self.FK__MONHOC__MAKHOA__6477ECF3">
             <End Role="KHOA" EntitySet="KHOA" />
             <End Role="MONHOC" EntitySet="MONHOC" />
           </AssociationSet>
-          <AssociationSet Name="FK__SVIEN__MAKHOA__4AB81AF0" Association="Self.FK__SVIEN__MAKHOA__4AB81AF0">
+          <AssociationSet Name="FK__SVIEN__MAKHOA__68487DD7" Association="Self.FK__SVIEN__MAKHOA__68487DD7">
             <End Role="KHOA" EntitySet="KHOA" />
             <End Role="SVIEN" EntitySet="SVIEN" />
           </AssociationSet>
-          <AssociationSet Name="FK__SVIEN__MALOP__286302EC" Association="Self.FK__SVIEN__MALOP__286302EC">
+          <AssociationSet Name="FK__SVIEN__MALOP__693CA210" Association="Self.FK__SVIEN__MALOP__693CA210">
             <End Role="LOP" EntitySet="LOP" />
             <End Role="SVIEN" EntitySet="SVIEN" />
           </AssociationSet>
@@ -171,27 +175,27 @@
           <EntitySet Name="LOPs" EntityType="ScoreManagementModel.LOP" />
           <EntitySet Name="MONHOCs" EntityType="ScoreManagementModel.MONHOC" />
           <EntitySet Name="SVIENs" EntityType="ScoreManagementModel.SVIEN" />
-          <AssociationSet Name="FK__DIEM__MAMH__2F10007B" Association="ScoreManagementModel.FK__DIEM__MAMH__2F10007B">
+          <AssociationSet Name="FK__DIEM__MAMH__656C112C" Association="ScoreManagementModel.FK__DIEM__MAMH__656C112C">
             <End Role="MONHOC" EntitySet="MONHOCs" />
             <End Role="DIEM" EntitySet="DIEMs" />
           </AssociationSet>
-          <AssociationSet Name="FK__DIEM__MASV__2E1BDC42" Association="ScoreManagementModel.FK__DIEM__MASV__2E1BDC42">
+          <AssociationSet Name="FK__DIEM__MASV__6A30C649" Association="ScoreManagementModel.FK__DIEM__MASV__6A30C649">
             <End Role="SVIEN" EntitySet="SVIENs" />
             <End Role="DIEM" EntitySet="DIEMs" />
           </AssociationSet>
-          <AssociationSet Name="FK__LOP__MAKHOA__49C3F6B7" Association="ScoreManagementModel.FK__LOP__MAKHOA__49C3F6B7">
+          <AssociationSet Name="FK__LOP__MAKHOA__60A75C0F" Association="ScoreManagementModel.FK__LOP__MAKHOA__60A75C0F">
             <End Role="KHOA" EntitySet="KHOAs" />
             <End Role="LOP" EntitySet="LOPs" />
           </AssociationSet>
-          <AssociationSet Name="FK__MONHOC__MAKHOA__4BAC3F29" Association="ScoreManagementModel.FK__MONHOC__MAKHOA__4BAC3F29">
+          <AssociationSet Name="FK__MONHOC__MAKHOA__6477ECF3" Association="ScoreManagementModel.FK__MONHOC__MAKHOA__6477ECF3">
             <End Role="KHOA" EntitySet="KHOAs" />
             <End Role="MONHOC" EntitySet="MONHOCs" />
           </AssociationSet>
-          <AssociationSet Name="FK__SVIEN__MAKHOA__4AB81AF0" Association="ScoreManagementModel.FK__SVIEN__MAKHOA__4AB81AF0">
+          <AssociationSet Name="FK__SVIEN__MAKHOA__68487DD7" Association="ScoreManagementModel.FK__SVIEN__MAKHOA__68487DD7">
             <End Role="KHOA" EntitySet="KHOAs" />
             <End Role="SVIEN" EntitySet="SVIENs" />
           </AssociationSet>
-          <AssociationSet Name="FK__SVIEN__MALOP__286302EC" Association="ScoreManagementModel.FK__SVIEN__MALOP__286302EC">
+          <AssociationSet Name="FK__SVIEN__MALOP__693CA210" Association="ScoreManagementModel.FK__SVIEN__MALOP__693CA210">
             <End Role="LOP" EntitySet="LOPs" />
             <End Role="SVIEN" EntitySet="SVIENs" />
           </AssociationSet>
@@ -201,6 +205,7 @@
             <PropertyRef Name="MASV" />
             <PropertyRef Name="MAMH" />
           </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MASV" Type="Int32" Nullable="false" />
           <Property Name="MAMH" Type="Int32" Nullable="false" />
           <Property Name="CHUYENCAN" Type="Int32" />
@@ -208,8 +213,8 @@
           <Property Name="GIUAKI" Type="Int32" />
           <Property Name="CUOIKI" Type="Int32" />
           <Property Name="TONGKET" Type="Int32" />
-          <NavigationProperty Name="MONHOC" Relationship="ScoreManagementModel.FK__DIEM__MAMH__2F10007B" FromRole="DIEM" ToRole="MONHOC" />
-          <NavigationProperty Name="SVIEN" Relationship="ScoreManagementModel.FK__DIEM__MASV__2E1BDC42" FromRole="DIEM" ToRole="SVIEN" />
+          <NavigationProperty Name="MONHOC" Relationship="ScoreManagementModel.FK__DIEM__MAMH__656C112C" FromRole="DIEM" ToRole="MONHOC" />
+          <NavigationProperty Name="SVIEN" Relationship="ScoreManagementModel.FK__DIEM__MASV__6A30C649" FromRole="DIEM" ToRole="SVIEN" />
         </EntityType>
         <EntityType Name="KHOA">
           <Key>
@@ -218,36 +223,39 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MAKHOA" Type="Int32" Nullable="false" />
           <Property Name="TENKHOA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="LOPs" Relationship="ScoreManagementModel.FK__LOP__MAKHOA__49C3F6B7" FromRole="KHOA" ToRole="LOP" />
-          <NavigationProperty Name="MONHOCs" Relationship="ScoreManagementModel.FK__MONHOC__MAKHOA__4BAC3F29" FromRole="KHOA" ToRole="MONHOC" />
-          <NavigationProperty Name="SVIENs" Relationship="ScoreManagementModel.FK__SVIEN__MAKHOA__4AB81AF0" FromRole="KHOA" ToRole="SVIEN" />
+          <NavigationProperty Name="LOPs" Relationship="ScoreManagementModel.FK__LOP__MAKHOA__60A75C0F" FromRole="KHOA" ToRole="LOP" />
+          <NavigationProperty Name="MONHOCs" Relationship="ScoreManagementModel.FK__MONHOC__MAKHOA__6477ECF3" FromRole="KHOA" ToRole="MONHOC" />
+          <NavigationProperty Name="SVIENs" Relationship="ScoreManagementModel.FK__SVIEN__MAKHOA__68487DD7" FromRole="KHOA" ToRole="SVIEN" />
         </EntityType>
         <EntityType Name="LOP">
           <Key>
             <PropertyRef Name="MALOP" />
           </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MALOP" Type="Int32" Nullable="false" />
           <Property Name="TENLOP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="MAKHOA" Type="Int32" />
-          <NavigationProperty Name="KHOA" Relationship="ScoreManagementModel.FK__LOP__MAKHOA__49C3F6B7" FromRole="LOP" ToRole="KHOA" />
-          <NavigationProperty Name="SVIENs" Relationship="ScoreManagementModel.FK__SVIEN__MALOP__286302EC" FromRole="LOP" ToRole="SVIEN" />
+          <NavigationProperty Name="KHOA" Relationship="ScoreManagementModel.FK__LOP__MAKHOA__60A75C0F" FromRole="LOP" ToRole="KHOA" />
+          <NavigationProperty Name="SVIENs" Relationship="ScoreManagementModel.FK__SVIEN__MALOP__693CA210" FromRole="LOP" ToRole="SVIEN" />
         </EntityType>
         <EntityType Name="MONHOC">
           <Key>
             <PropertyRef Name="MAMH" />
           </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MAMH" Type="Int32" Nullable="false" />
           <Property Name="TENMH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="TINCHI" Type="Int32" />
           <Property Name="GIOHOC" Type="Time" Precision="7" />
           <Property Name="MAKHOA" Type="Int32" />
-          <NavigationProperty Name="DIEMs" Relationship="ScoreManagementModel.FK__DIEM__MAMH__2F10007B" FromRole="MONHOC" ToRole="DIEM" />
-          <NavigationProperty Name="KHOA" Relationship="ScoreManagementModel.FK__MONHOC__MAKHOA__4BAC3F29" FromRole="MONHOC" ToRole="KHOA" />
+          <NavigationProperty Name="DIEMs" Relationship="ScoreManagementModel.FK__DIEM__MAMH__656C112C" FromRole="MONHOC" ToRole="DIEM" />
+          <NavigationProperty Name="KHOA" Relationship="ScoreManagementModel.FK__MONHOC__MAKHOA__6477ECF3" FromRole="MONHOC" ToRole="KHOA" />
         </EntityType>
         <EntityType Name="SVIEN">
           <Key>
             <PropertyRef Name="MASV" />
           </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MASV" Type="Int32" Nullable="false" />
           <Property Name="TENSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MALOP" Type="Int32" />
@@ -257,11 +265,11 @@
           <Property Name="SDT" Type="Int32" />
           <Property Name="EMAIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="DIACHI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="DIEMs" Relationship="ScoreManagementModel.FK__DIEM__MASV__2E1BDC42" FromRole="SVIEN" ToRole="DIEM" />
-          <NavigationProperty Name="KHOA" Relationship="ScoreManagementModel.FK__SVIEN__MAKHOA__4AB81AF0" FromRole="SVIEN" ToRole="KHOA" />
-          <NavigationProperty Name="LOP" Relationship="ScoreManagementModel.FK__SVIEN__MALOP__286302EC" FromRole="SVIEN" ToRole="LOP" />
+          <NavigationProperty Name="DIEMs" Relationship="ScoreManagementModel.FK__DIEM__MASV__6A30C649" FromRole="SVIEN" ToRole="DIEM" />
+          <NavigationProperty Name="KHOA" Relationship="ScoreManagementModel.FK__SVIEN__MAKHOA__68487DD7" FromRole="SVIEN" ToRole="KHOA" />
+          <NavigationProperty Name="LOP" Relationship="ScoreManagementModel.FK__SVIEN__MALOP__693CA210" FromRole="SVIEN" ToRole="LOP" />
         </EntityType>
-        <Association Name="FK__DIEM__MAMH__2F10007B">
+        <Association Name="FK__DIEM__MAMH__656C112C">
           <End Type="ScoreManagementModel.MONHOC" Role="MONHOC" Multiplicity="1" />
           <End Type="ScoreManagementModel.DIEM" Role="DIEM" Multiplicity="*" />
           <ReferentialConstraint>
@@ -273,7 +281,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DIEM__MASV__2E1BDC42">
+        <Association Name="FK__DIEM__MASV__6A30C649">
           <End Type="ScoreManagementModel.SVIEN" Role="SVIEN" Multiplicity="1" />
           <End Type="ScoreManagementModel.DIEM" Role="DIEM" Multiplicity="*" />
           <ReferentialConstraint>
@@ -285,7 +293,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__LOP__MAKHOA__49C3F6B7">
+        <Association Name="FK__LOP__MAKHOA__60A75C0F">
           <End Type="ScoreManagementModel.KHOA" Role="KHOA" Multiplicity="0..1" />
           <End Type="ScoreManagementModel.LOP" Role="LOP" Multiplicity="*" />
           <ReferentialConstraint>
@@ -297,7 +305,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MONHOC__MAKHOA__4BAC3F29">
+        <Association Name="FK__MONHOC__MAKHOA__6477ECF3">
           <End Type="ScoreManagementModel.KHOA" Role="KHOA" Multiplicity="0..1" />
           <End Type="ScoreManagementModel.MONHOC" Role="MONHOC" Multiplicity="*" />
           <ReferentialConstraint>
@@ -309,7 +317,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SVIEN__MAKHOA__4AB81AF0">
+        <Association Name="FK__SVIEN__MAKHOA__68487DD7">
           <End Type="ScoreManagementModel.KHOA" Role="KHOA" Multiplicity="0..1" />
           <End Type="ScoreManagementModel.SVIEN" Role="SVIEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -321,7 +329,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__SVIEN__MALOP__286302EC">
+        <Association Name="FK__SVIEN__MALOP__693CA210">
           <End Type="ScoreManagementModel.LOP" Role="LOP" Multiplicity="0..1" />
           <End Type="ScoreManagementModel.SVIEN" Role="SVIEN" Multiplicity="*" />
           <ReferentialConstraint>
@@ -333,7 +341,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -349,6 +357,7 @@
                 <ScalarProperty Name="CHUYENCAN" ColumnName="CHUYENCAN" />
                 <ScalarProperty Name="MAMH" ColumnName="MAMH" />
                 <ScalarProperty Name="MASV" ColumnName="MASV" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -367,6 +376,7 @@
                 <ScalarProperty Name="MAKHOA" ColumnName="MAKHOA" />
                 <ScalarProperty Name="TENLOP" ColumnName="TENLOP" />
                 <ScalarProperty Name="MALOP" ColumnName="MALOP" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -378,6 +388,7 @@
                 <ScalarProperty Name="TINCHI" ColumnName="TINCHI" />
                 <ScalarProperty Name="TENMH" ColumnName="TENMH" />
                 <ScalarProperty Name="MAMH" ColumnName="MAMH" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -393,6 +404,7 @@
                 <ScalarProperty Name="MALOP" ColumnName="MALOP" />
                 <ScalarProperty Name="TENSV" ColumnName="TENSV" />
                 <ScalarProperty Name="MASV" ColumnName="MASV" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

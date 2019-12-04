@@ -5,17 +5,17 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="bacc7b392c5a47498ae5d848868a47b3" Name="Diagram1" ZoomLevel="94">
-        <EntityTypeShape EntityType="ScoreManagementModel.DIEM" Width="1.5" PointX="7.5" PointY="2.875" />
-        <EntityTypeShape EntityType="ScoreManagementModel.KHOA" Width="1.5" PointX="0.75" PointY="3.25" />
-        <EntityTypeShape EntityType="ScoreManagementModel.LOP" Width="1.5" PointX="3" PointY="4.875" />
-        <EntityTypeShape EntityType="ScoreManagementModel.MONHOC" Width="1.5" PointX="3" PointY="1.875" />
-        <EntityTypeShape EntityType="ScoreManagementModel.SVIEN" Width="1.5" PointX="5.25" PointY="3.375" />
-        <AssociationConnector Association="ScoreManagementModel.FK__DIEM__MAMH__2F10007B" />
-        <AssociationConnector Association="ScoreManagementModel.FK__DIEM__MASV__2E1BDC42" />
-        <AssociationConnector Association="ScoreManagementModel.FK__LOP__MAKHOA__49C3F6B7" />
-        <AssociationConnector Association="ScoreManagementModel.FK__MONHOC__MAKHOA__4BAC3F29" />
-        <AssociationConnector Association="ScoreManagementModel.FK__SVIEN__MAKHOA__4AB81AF0" />
-        <AssociationConnector Association="ScoreManagementModel.FK__SVIEN__MALOP__286302EC" />
+        <EntityTypeShape EntityType="ScoreManagementModel.DIEM" Width="1.5" PointX="7.5" PointY="3.125" />
+        <EntityTypeShape EntityType="ScoreManagementModel.KHOA" Width="1.5" PointX="0.75" PointY="3.5" />
+        <EntityTypeShape EntityType="ScoreManagementModel.LOP" Width="1.5" PointX="3" PointY="1.875" />
+        <EntityTypeShape EntityType="ScoreManagementModel.MONHOC" Width="1.5" PointX="3" PointY="4.75" />
+        <EntityTypeShape EntityType="ScoreManagementModel.SVIEN" Width="1.5" PointX="5.25" PointY="2" />
+        <AssociationConnector Association="ScoreManagementModel.FK__DIEM__MAMH__656C112C" />
+        <AssociationConnector Association="ScoreManagementModel.FK__DIEM__MASV__6A30C649" />
+        <AssociationConnector Association="ScoreManagementModel.FK__LOP__MAKHOA__60A75C0F" />
+        <AssociationConnector Association="ScoreManagementModel.FK__MONHOC__MAKHOA__6477ECF3" />
+        <AssociationConnector Association="ScoreManagementModel.FK__SVIEN__MAKHOA__68487DD7" />
+        <AssociationConnector Association="ScoreManagementModel.FK__SVIEN__MALOP__693CA210" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

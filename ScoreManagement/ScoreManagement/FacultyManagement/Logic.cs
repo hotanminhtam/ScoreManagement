@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ScoreManagement.FacultyManagement
 {
-    class Logic
+    public class Logic
     {
         public KHOA[] GetKHOAs()
         {
@@ -14,13 +14,13 @@ namespace ScoreManagement.FacultyManagement
             return db.KHOAs.ToArray();
         }
 
-        public KHOA GetStudent(int makhoa)
+        public KHOA GetFaculty(int id)
         {
             var db = new ScoreManagementEntities();
-            return db.KHOAs.Find(makhoa);
+            return db.KHOAs.Find(id);
         }
 
-        public void CreateFaculty (int makhoa, string tenkhoa)
+        public void CreateFaculty(int makhoa, string tenkhoa)
         {
             var fac = new KHOA();
             fac.MAKHOA = makhoa;
@@ -31,10 +31,10 @@ namespace ScoreManagement.FacultyManagement
             db.SaveChanges();
         }
 
-        public void DeleteFaculty (int makhoa)
+        public void DeleteFaculty (int id)
         {
             var db = new ScoreManagementEntities();
-            var fac = db.KHOAs.Find(makhoa);
+            var fac = db.KHOAs.Find(id);
             db.KHOAs.Remove(fac);
             db.SaveChanges();
         }

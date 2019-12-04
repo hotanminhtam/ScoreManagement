@@ -20,6 +20,7 @@ namespace ScoreManagement
             this.SVIENs = new HashSet<SVIEN>();
         }
     
+        public int ID { get; set; }
         public int MALOP { get; set; }
         public string TENLOP { get; set; }
         public Nullable<int> MAKHOA { get; set; }

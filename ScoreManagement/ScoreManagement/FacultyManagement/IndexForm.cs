@@ -25,6 +25,12 @@ namespace ScoreManagement.FacultyManagement
             this.btnBack.Click += BtnBack_Click;
         }
 
+        private void BtnCreate_Click(object sender, EventArgs e)
+        {
+            new CreateForm().ShowDialog();
+            this.ShowAllFaculty();
+        }
+
         private void BtnBack_Click(object sender, EventArgs e)
         {
             var temp = this.Owner;
@@ -40,20 +46,17 @@ namespace ScoreManagement.FacultyManagement
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if(this.grdFaculty.SelectedRows.Count == 1)
+            if (this.grdFaculty.SelectedRows.Count == 1)
             {
-                if(MessageBox.Show("Do you want delete?", "Confirm", MessageBoxButtons.YesNo)
+                if (MessageBox.Show("Do you want delete?", "Confirm", MessageBoxButtons.YesNo)
                     == DialogResult.Yes)
                 {
-
+                    var @khoa = (KHOA)this.grdFaculty.SelectedRows[0].DataBoundItem;
+                    this.Business.DeleteFaculty(@khoa.ID);
+                    MessageBox.Show("Delete Faculty successfully!");
+                    this.ShowAllFaculty();
                 }
             }
-        }
-
-        private void BtnCreate_Click(object sender, EventArgs e)
-        {
-            new CreateForm().ShowDialog();
-            this.ShowAllFaculty();
         }
 
         private void IndexForm_Load(object sender, EventArgs e)
