@@ -31,10 +31,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnFile = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCreate = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBack = new System.Windows.Forms.ToolStripMenuItem();
             this.grdFalculty = new System.Windows.Forms.DataGridView();
             this.grdFaculty = new System.Windows.Forms.DataGridView();
-            this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdFalculty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdFaculty)).BeginInit();
@@ -66,8 +66,14 @@
             // btnCreate
             // 
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(270, 42);
+            this.btnCreate.Size = new System.Drawing.Size(192, 42);
             this.btnCreate.Text = "Create";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(192, 42);
+            this.btnDelete.Text = "Delete";
             // 
             // btnBack
             // 
@@ -105,12 +111,6 @@
             this.grdFaculty.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdFaculty.Size = new System.Drawing.Size(1115, 491);
             this.grdFaculty.TabIndex = 1;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(270, 42);
-            this.btnDelete.Text = "Delete";
             // 
             // IndexForm
             // 

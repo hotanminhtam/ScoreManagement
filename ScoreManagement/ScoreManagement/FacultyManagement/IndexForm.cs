@@ -53,7 +53,7 @@ namespace ScoreManagement.FacultyManagement
                 {
                     var @khoa = (KHOA)this.grdFaculty.SelectedRows[0].DataBoundItem;
                     this.Business.DeleteFaculty(@khoa.ID);
-                    MessageBox.Show("Delete Faculty successfully!");
+                    MessageBox.Show("Delete Facult successfully!");
                     this.ShowAllFaculty();
                 }
             }
