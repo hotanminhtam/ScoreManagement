@@ -40,9 +40,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(38, 81);
+            this.label1.Location = new System.Drawing.Point(51, 100);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 31);
+            this.label1.Size = new System.Drawing.Size(147, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã khoa";
             // 
@@ -50,34 +51,38 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 151);
+            this.label2.Location = new System.Drawing.Point(51, 186);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 31);
+            this.label2.Size = new System.Drawing.Size(155, 38);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên khoa";
             // 
             // txtMaKhoa
             // 
             this.txtMaKhoa.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaKhoa.Location = new System.Drawing.Point(188, 80);
+            this.txtMaKhoa.Location = new System.Drawing.Point(251, 98);
+            this.txtMaKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaKhoa.Name = "txtMaKhoa";
-            this.txtMaKhoa.Size = new System.Drawing.Size(275, 32);
+            this.txtMaKhoa.Size = new System.Drawing.Size(365, 38);
             this.txtMaKhoa.TabIndex = 2;
             // 
             // txtTenKhoa
             // 
             this.txtTenKhoa.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenKhoa.Location = new System.Drawing.Point(188, 150);
+            this.txtTenKhoa.Location = new System.Drawing.Point(251, 185);
+            this.txtTenKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenKhoa.Name = "txtTenKhoa";
-            this.txtTenKhoa.Size = new System.Drawing.Size(275, 32);
+            this.txtTenKhoa.Size = new System.Drawing.Size(365, 38);
             this.txtTenKhoa.TabIndex = 3;
             // 
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(278, 228);
+            this.btnCancel.Location = new System.Drawing.Point(371, 281);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(112, 40);
+            this.btnCancel.Size = new System.Drawing.Size(149, 49);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -85,26 +90,29 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(100, 228);
+            this.btnSave.Location = new System.Drawing.Point(133, 281);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(112, 40);
+            this.btnSave.Size = new System.Drawing.Size(149, 49);
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
             // CreateForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 292);
+            this.ClientSize = new System.Drawing.Size(664, 359);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtTenKhoa);
             this.Controls.Add(this.txtMaKhoa);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CreateForm";
             this.Text = "CreateForm";
+            this.Load += new System.EventHandler(this.CreateForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

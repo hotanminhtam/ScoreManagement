@@ -48,8 +48,7 @@
             this.btnBack});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1672, 43);
+            this.menuStrip1.Size = new System.Drawing.Size(1486, 35);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -60,42 +59,42 @@
             this.btnDelete});
             this.btnFile.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFile.Name = "btnFile";
-            this.btnFile.Size = new System.Drawing.Size(75, 37);
+            this.btnFile.Size = new System.Drawing.Size(62, 31);
             this.btnFile.Text = "File";
             // 
             // btnCreate
             // 
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(192, 42);
+            this.btnCreate.Size = new System.Drawing.Size(162, 32);
             this.btnCreate.Text = "Create";
             // 
             // btnDelete
             // 
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(192, 42);
+            this.btnDelete.Size = new System.Drawing.Size(162, 32);
             this.btnDelete.Text = "Delete";
             // 
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(88, 37);
+            this.btnBack.Size = new System.Drawing.Size(76, 31);
             this.btnBack.Text = "Back";
             // 
             // grdFalculty
             // 
-            this.grdFalculty.AllowUserToAddRows = false;
-            this.grdFalculty.AllowUserToDeleteRows = false;
+            this.grdFalculty.AllowDrop = true;
+            this.grdFalculty.AllowUserToOrderColumns = true;
             this.grdFalculty.BackgroundColor = this.BackColor;
             this.grdFalculty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdFalculty.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdFalculty.Location = new System.Drawing.Point(0, 43);
-            this.grdFalculty.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grdFalculty.Location = new System.Drawing.Point(0, 35);
+            this.grdFalculty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdFalculty.Name = "grdFalculty";
             this.grdFalculty.ReadOnly = true;
             this.grdFalculty.RowHeadersWidth = 62;
             this.grdFalculty.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdFalculty.Size = new System.Drawing.Size(1672, 765);
+            this.grdFalculty.Size = new System.Drawing.Size(1486, 611);
             this.grdFalculty.TabIndex = 1;
             // 
             // grdFaculty
@@ -114,13 +113,13 @@
             // 
             // IndexForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1672, 808);
+            this.ClientSize = new System.Drawing.Size(1486, 646);
             this.Controls.Add(this.grdFalculty);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "IndexForm";
             this.Text = "IndexForm";
             this.menuStrip1.ResumeLayout(false);

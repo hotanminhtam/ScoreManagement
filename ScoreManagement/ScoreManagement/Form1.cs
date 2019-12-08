@@ -21,7 +21,7 @@ namespace ScoreManagement
         private void BtnStart_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ScoreManagement.FacultyManagement.IndexForm index = new FacultyManagement.IndexForm();
+            ScoreManagement.ClassManagement.IndexClass index = new ClassManagement.IndexClass();
             index.Show();
             index.Owner = this;
         }

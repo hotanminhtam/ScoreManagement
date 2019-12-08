@@ -34,5 +34,10 @@ namespace ScoreManagement.FacultyManagement
             MessageBox.Show("Create Successfully!");
             this.Close();
         }
+
+        private void CreateForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
