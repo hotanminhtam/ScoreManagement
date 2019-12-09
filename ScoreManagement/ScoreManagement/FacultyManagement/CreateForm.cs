@@ -37,7 +37,7 @@ namespace ScoreManagement.FacultyManagement
 
         private void CreateForm_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

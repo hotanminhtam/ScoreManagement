@@ -62,7 +62,7 @@
             // 
             this.txtMaKhoa.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaKhoa.Location = new System.Drawing.Point(251, 98);
-            this.txtMaKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaKhoa.Name = "txtMaKhoa";
             this.txtMaKhoa.Size = new System.Drawing.Size(365, 38);
             this.txtMaKhoa.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             this.txtTenKhoa.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKhoa.Location = new System.Drawing.Point(251, 185);
-            this.txtTenKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenKhoa.Name = "txtTenKhoa";
             this.txtTenKhoa.Size = new System.Drawing.Size(365, 38);
             this.txtTenKhoa.TabIndex = 3;
@@ -80,7 +80,7 @@
             // 
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(371, 281);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(149, 49);
             this.btnCancel.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(133, 281);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(149, 49);
             this.btnSave.TabIndex = 5;
@@ -109,7 +109,7 @@
             this.Controls.Add(this.txtMaKhoa);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CreateForm";
             this.Text = "CreateForm";
             this.Load += new System.EventHandler(this.CreateForm_Load);

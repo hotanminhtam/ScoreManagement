@@ -11,5 +11,6 @@ namespace ScoreManagement.ClassManagement
         public int ID { get; set; }
         public int MALOP { get; set; }
         public string TENLOP { get; set; }
+        public int MAKHOA { get; set; }
     }
 }

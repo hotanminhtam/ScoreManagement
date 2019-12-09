@@ -99,11 +99,12 @@
     <Compile Include="FacultyManagement\CreateForm.Designer.cs">
       <DependentUpon>CreateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FacultyManagement\IndexForm.cs">
+    <Compile Include="FacultyManagement\Faculty.cs" />
+    <Compile Include="FacultyManagement\IndexFac.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FacultyManagement\IndexForm.Designer.cs">
-      <DependentUpon>IndexForm.cs</DependentUpon>
+    <Compile Include="FacultyManagement\IndexFac.Designer.cs">
+      <DependentUpon>IndexFac.cs</DependentUpon>
     </Compile>
     <Compile Include="FacultyManagement\Logic.cs" />
     <Compile Include="FacultyManagement\UpdateForm.cs">
@@ -159,8 +160,8 @@
     <EmbeddedResource Include="FacultyManagement\CreateForm.resx">
       <DependentUpon>CreateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FacultyManagement\IndexForm.resx">
-      <DependentUpon>IndexForm.cs</DependentUpon>
+    <EmbeddedResource Include="FacultyManagement\IndexFac.resx">
+      <DependentUpon>IndexFac.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FacultyManagement\UpdateForm.resx">
       <DependentUpon>UpdateForm.cs</DependentUpon>

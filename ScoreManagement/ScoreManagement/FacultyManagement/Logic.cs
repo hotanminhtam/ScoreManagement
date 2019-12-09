@@ -14,7 +14,7 @@ namespace ScoreManagement.FacultyManagement
             return db.KHOAs.ToArray();
         }
 
-        public KHOA GetFaculty(int id)
+        public KHOA GetKHOA(int id)
         {
             var db = new ScoreManagementEntities();
             return db.KHOAs.Find(id);
@@ -49,6 +49,12 @@ namespace ScoreManagement.FacultyManagement
 
             db.Entry(oldFac).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
+        }
+
+         public KHOA[] GetKHOA()
+        {
+            var db = new ScoreManagementEntities();
+            return db.KHOAs.ToArray();
         }
     }
 }
