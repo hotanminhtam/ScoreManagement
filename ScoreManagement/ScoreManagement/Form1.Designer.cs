@@ -36,34 +36,31 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(419, 181);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(276, 132);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 26);
+            this.label1.Size = new System.Drawing.Size(366, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản lý điểm sinh viên";
             // 
             // btnStart
             // 
             this.btnStart.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(479, 354);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStart.Location = new System.Drawing.Point(400, 230);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(89, 36);
+            this.btnStart.Size = new System.Drawing.Size(134, 55);
             this.btnStart.TabIndex = 1;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ScoreManagement.Properties.Resources.pngtree_flat_cartoon_training_learning_banner_image_182834;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1115, 525);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(972, 361);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Quản lý điểm sinh viên";
             this.ResumeLayout(false);

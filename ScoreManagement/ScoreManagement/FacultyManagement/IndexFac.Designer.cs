@@ -47,7 +47,8 @@
             this.btnFile});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(911, 35);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(972, 41);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -55,7 +56,7 @@
             // 
             this.btnBack.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(76, 31);
+            this.btnBack.Size = new System.Drawing.Size(88, 37);
             this.btnBack.Text = "Back";
             // 
             // btnFile
@@ -66,25 +67,25 @@
             this.btnUpdate});
             this.btnFile.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnFile.Name = "btnFile";
-            this.btnFile.Size = new System.Drawing.Size(62, 31);
+            this.btnFile.Size = new System.Drawing.Size(75, 37);
             this.btnFile.Text = "File";
             // 
             // btnCreate
             // 
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(224, 32);
+            this.btnCreate.Size = new System.Drawing.Size(199, 42);
             this.btnCreate.Text = "Create";
             // 
             // btnDelete
             // 
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(224, 32);
+            this.btnDelete.Size = new System.Drawing.Size(199, 42);
             this.btnDelete.Text = "Delete";
             // 
             // btnUpdate
             // 
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(224, 32);
+            this.btnUpdate.Size = new System.Drawing.Size(199, 42);
             this.btnUpdate.Text = "Update";
             // 
             // grdFac
@@ -93,23 +94,25 @@
             this.grdFac.AllowUserToDeleteRows = false;
             this.grdFac.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdFac.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdFac.Location = new System.Drawing.Point(0, 35);
+            this.grdFac.Location = new System.Drawing.Point(0, 41);
+            this.grdFac.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grdFac.Name = "grdFac";
             this.grdFac.ReadOnly = true;
             this.grdFac.RowHeadersWidth = 51;
             this.grdFac.RowTemplate.Height = 24;
             this.grdFac.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdFac.Size = new System.Drawing.Size(911, 469);
+            this.grdFac.Size = new System.Drawing.Size(972, 320);
             this.grdFac.TabIndex = 1;
             // 
             // IndexFac
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 504);
+            this.ClientSize = new System.Drawing.Size(972, 361);
             this.Controls.Add(this.grdFac);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "IndexFac";
             this.Text = "IndexFac";
             this.menuStrip1.ResumeLayout(false);
