@@ -15,6 +15,36 @@ namespace ScoreManagement.StudentManagement
         public StudentInformation()
         {
             InitializeComponent();
+            this.btnBack.Click += BtnBack_Click;
+            this.btnSave.Click += BtnSave_Click;
+            this.btnUpdate.Click += BtnUpdate_Click;
+            this.btnDelete.Click += BtnDelete_Click;
+            this.grdSinhVien.Click += GrdSinhVien_Click;
+        }
+
+        private void GrdSinhVien_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
