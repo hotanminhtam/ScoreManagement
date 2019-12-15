@@ -21,19 +21,18 @@ namespace ScoreManagement
         }
     
         public int ID { get; set; }
-        public int MASV { get; set; }
+        public int MANGANH { get; set; }
+        public string MASV { get; set; }
         public string TENSV { get; set; }
-        public Nullable<int> MALOP { get; set; }
-        public Nullable<int> MAKHOA { get; set; }
-        public Nullable<bool> GTINH { get; set; }
-        public Nullable<System.DateTime> NGSINH { get; set; }
+        public Nullable<bool> GIOITINH { get; set; }
+        public Nullable<System.DateTime> NGAYSINH { get; set; }
         public Nullable<int> SDT { get; set; }
         public string EMAIL { get; set; }
+        public Nullable<int> CMND { get; set; }
+        public string QUEQUAN { get; set; }
         public string DIACHI { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DIEM> DIEMs { get; set; }
-        public virtual KHOA KHOA { get; set; }
-        public virtual LOP LOP { get; set; }
     }
 }

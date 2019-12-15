@@ -70,60 +70,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassManagement\Class.cs" />
-    <Compile Include="ClassManagement\CreateClass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ClassManagement\CreateClass.Designer.cs">
-      <DependentUpon>CreateClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ClassManagement\IndexClass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ClassManagement\IndexClass.Designer.cs">
-      <DependentUpon>IndexClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ClassManagement\LogicClass.cs" />
-    <Compile Include="ClassManagement\UpdateClass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ClassManagement\UpdateClass.Designer.cs">
-      <DependentUpon>UpdateClass.cs</DependentUpon>
-    </Compile>
     <Compile Include="DIEM.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
-    <Compile Include="FacultyManagement\CreateForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FacultyManagement\CreateForm.Designer.cs">
-      <DependentUpon>CreateForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FacultyManagement\Faculty.cs" />
     <Compile Include="FacultyManagement\IndexFac.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FacultyManagement\IndexFac.Designer.cs">
       <DependentUpon>IndexFac.cs</DependentUpon>
     </Compile>
-    <Compile Include="FacultyManagement\Logic.cs" />
-    <Compile Include="FacultyManagement\UpdateForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FacultyManagement\UpdateForm.Designer.cs">
-      <DependentUpon>UpdateForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KHOA.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
-    <Compile Include="LOP.cs">
-      <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="Models.Context.cs">
       <AutoGen>True</AutoGen>
@@ -143,28 +103,16 @@
     <Compile Include="MONHOC.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="NGANH.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SVIEN.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ClassManagement\CreateClass.resx">
-      <DependentUpon>CreateClass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ClassManagement\IndexClass.resx">
-      <DependentUpon>IndexClass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ClassManagement\UpdateClass.resx">
-      <DependentUpon>UpdateClass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FacultyManagement\CreateForm.resx">
-      <DependentUpon>CreateForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FacultyManagement\IndexFac.resx">
       <DependentUpon>IndexFac.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FacultyManagement\UpdateForm.resx">
-      <DependentUpon>UpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -235,10 +183,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NameManagement\" />
-    <Folder Include="ScoreManagement\" />
-    <Folder Include="SubjectManagement\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

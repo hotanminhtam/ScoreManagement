@@ -12,25 +12,19 @@ namespace ScoreManagement
     using System;
     using System.Collections.Generic;
     
-    public partial class KHOA
+    public partial class NGANH
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public KHOA()
+        public NGANH()
         {
-            this.LOPs = new HashSet<LOP>();
             this.MONHOCs = new HashSet<MONHOC>();
-            this.SVIENs = new HashSet<SVIEN>();
         }
     
         public int ID { get; set; }
-        public int MAKHOA { get; set; }
-        public string TENKHOA { get; set; }
+        public int MANGANH { get; set; }
+        public string TENNGANH { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LOP> LOPs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MONHOC> MONHOCs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SVIEN> SVIENs { get; set; }
     }
 }

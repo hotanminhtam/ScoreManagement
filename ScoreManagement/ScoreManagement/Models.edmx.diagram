@@ -4,18 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="bacc7b392c5a47498ae5d848868a47b3" Name="Diagram1" ZoomLevel="94">
-        <EntityTypeShape EntityType="ScoreManagementModel.DIEM" Width="1.5" PointX="7.5" PointY="3.125" />
-        <EntityTypeShape EntityType="ScoreManagementModel.KHOA" Width="1.5" PointX="0.75" PointY="3.5" />
-        <EntityTypeShape EntityType="ScoreManagementModel.LOP" Width="1.5" PointX="3" PointY="1.875" />
-        <EntityTypeShape EntityType="ScoreManagementModel.MONHOC" Width="1.5" PointX="3" PointY="4.75" />
-        <EntityTypeShape EntityType="ScoreManagementModel.SVIEN" Width="1.5" PointX="5.25" PointY="2" />
-        <AssociationConnector Association="ScoreManagementModel.FK__DIEM__MAMH__656C112C" />
-        <AssociationConnector Association="ScoreManagementModel.FK__DIEM__MASV__6A30C649" />
-        <AssociationConnector Association="ScoreManagementModel.FK__LOP__MAKHOA__60A75C0F" />
-        <AssociationConnector Association="ScoreManagementModel.FK__MONHOC__MAKHOA__6477ECF3" />
-        <AssociationConnector Association="ScoreManagementModel.FK__SVIEN__MAKHOA__68487DD7" />
-        <AssociationConnector Association="ScoreManagementModel.FK__SVIEN__MALOP__693CA210" />
+      <Diagram DiagramId="bacc7b392c5a47498ae5d848868a47b3" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="ScoreManagementModel.DIEM" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="ScoreManagementModel.MONHOC" Width="1.5" PointX="3" PointY="1.125" />
+        <EntityTypeShape EntityType="ScoreManagementModel.NGANH" Width="1.5" PointX="0.75" PointY="1.5" />
+        <EntityTypeShape EntityType="ScoreManagementModel.SVIEN" Width="1.5" PointX="3" PointY="4.75" />
+        <AssociationConnector Association="ScoreManagementModel.FK__DIEM__MAMH__2BFE89A6" />
+        <AssociationConnector Association="ScoreManagementModel.FK__DIEM__MASV__2B0A656D" />
+        <AssociationConnector Association="ScoreManagementModel.FK__MONHOC__MANGANH__2CF2ADDF" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

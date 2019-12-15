@@ -21,14 +21,14 @@ namespace ScoreManagement
         }
     
         public int ID { get; set; }
+        public Nullable<int> MANGANH { get; set; }
         public int MAMH { get; set; }
         public string TENMH { get; set; }
         public Nullable<int> TINCHI { get; set; }
         public Nullable<System.TimeSpan> GIOHOC { get; set; }
-        public Nullable<int> MAKHOA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DIEM> DIEMs { get; set; }
-        public virtual KHOA KHOA { get; set; }
+        public virtual NGANH NGANH { get; set; }
     }
 }

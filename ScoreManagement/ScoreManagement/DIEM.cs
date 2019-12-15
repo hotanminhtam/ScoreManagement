@@ -15,8 +15,8 @@ namespace ScoreManagement
     public partial class DIEM
     {
         public int ID { get; set; }
-        public int MASV { get; set; }
         public int MAMH { get; set; }
+        public string MASV { get; set; }
         public Nullable<int> CHUYENCAN { get; set; }
         public Nullable<int> BAITAP { get; set; }
         public Nullable<int> GIUAKI { get; set; }

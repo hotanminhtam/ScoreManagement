@@ -23,7 +23,6 @@ namespace ScoreManagement
             this.Hide();
             ScoreManagement.FacultyManagement.IndexFac index = new FacultyManagement.IndexFac();
             index.Show();
-            index.Owner = this;
         }
     }
 }
