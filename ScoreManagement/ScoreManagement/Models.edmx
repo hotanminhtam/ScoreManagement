@@ -48,7 +48,7 @@
           <Property Name="TENSV" Type="nvarchar" MaxLength="50" />
           <Property Name="GIOITINH" Type="bit" />
           <Property Name="NGAYSINH" Type="date" />
-          <Property Name="SDT" Type="int" />
+          <Property Name="SDT" Type="varchar" MaxLength="10" />
           <Property Name="EMAIL" Type="nvarchar(max)" />
           <Property Name="CMND" Type="int" />
           <Property Name="QUEQUAN" Type="nvarchar(max)" />
@@ -178,7 +178,7 @@
           <Property Name="TENSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="GIOITINH" Type="Boolean" />
           <Property Name="NGAYSINH" Type="DateTime" Precision="0" />
-          <Property Name="SDT" Type="Int32" />
+          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="EMAIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="CMND" Type="Int32" />
           <Property Name="QUEQUAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
