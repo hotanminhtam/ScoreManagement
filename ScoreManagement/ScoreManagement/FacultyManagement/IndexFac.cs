@@ -15,6 +15,14 @@ namespace ScoreManagement.FacultyManagement
         public IndexFac()
         {
             InitializeComponent();
+            this.btnTim.Click += BtnTim_Click;
+        }
+
+        private void BtnTim_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ScoreManagement.StudentManagement.StudentInformation index = new StudentManagement.StudentInformation();
+            index.Show();
         }
     }
 }
