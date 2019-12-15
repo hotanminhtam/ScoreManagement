@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.mONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.scoreManagementDataSet = new ScoreManagement.ScoreManagementDataSet();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -39,12 +41,23 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.scoreManagementDataSet = new ScoreManagement.ScoreManagementDataSet();
-            this.mONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mONHOCTableAdapter = new ScoreManagement.ScoreManagementDataSetTableAdapters.MONHOCTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scoreManagementDataSet)).BeginInit();
+            this.scoreManagementDataSetDiem = new ScoreManagement.ScoreManagementDataSetDiem();
+            this.dIEMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dIEMTableAdapter = new ScoreManagement.ScoreManagementDataSetDiemTableAdapters.DIEMTableAdapter();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mAMHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mASVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cHUYENCANDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bAITAPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gIUAKIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cUOIKIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tONGKETDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scoreManagementDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scoreManagementDataSetDiem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dIEMBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -68,6 +81,16 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(280, 28);
             this.comboBox1.TabIndex = 43;
+            // 
+            // mONHOCBindingSource
+            // 
+            this.mONHOCBindingSource.DataMember = "MONHOC";
+            this.mONHOCBindingSource.DataSource = this.scoreManagementDataSet;
+            // 
+            // scoreManagementDataSet
+            // 
+            this.scoreManagementDataSet.DataSetName = "ScoreManagementDataSet";
+            this.scoreManagementDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label2
             // 
@@ -102,19 +125,30 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.mAMHDataGridViewTextBoxColumn,
+            this.mASVDataGridViewTextBoxColumn,
+            this.cHUYENCANDataGridViewTextBoxColumn,
+            this.bAITAPDataGridViewTextBoxColumn,
+            this.gIUAKIDataGridViewTextBoxColumn,
+            this.cUOIKIDataGridViewTextBoxColumn,
+            this.tONGKETDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.dIEMBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(4, 129);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(802, 318);
+            this.dataGridView1.Size = new System.Drawing.Size(1192, 318);
             this.dataGridView1.TabIndex = 47;
             // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.MintCream;
             this.btnBack.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnBack.Location = new System.Drawing.Point(814, 275);
+            this.btnBack.Location = new System.Drawing.Point(1202, 275);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(145, 42);
             this.btnBack.TabIndex = 51;
@@ -125,7 +159,7 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Blue;
             this.btnUpdate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnUpdate.Location = new System.Drawing.Point(814, 360);
+            this.btnUpdate.Location = new System.Drawing.Point(1202, 360);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(145, 42);
             this.btnUpdate.TabIndex = 49;
@@ -136,7 +170,7 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.LimeGreen;
             this.btnSave.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSave.Location = new System.Drawing.Point(814, 318);
+            this.btnSave.Location = new System.Drawing.Point(1202, 318);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(145, 42);
             this.btnSave.TabIndex = 48;
@@ -147,33 +181,103 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnDelete.Location = new System.Drawing.Point(814, 402);
+            this.btnDelete.Location = new System.Drawing.Point(1202, 402);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(145, 42);
             this.btnDelete.TabIndex = 50;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // scoreManagementDataSet
-            // 
-            this.scoreManagementDataSet.DataSetName = "ScoreManagementDataSet";
-            this.scoreManagementDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mONHOCBindingSource
-            // 
-            this.mONHOCBindingSource.DataMember = "MONHOC";
-            this.mONHOCBindingSource.DataSource = this.scoreManagementDataSet;
-            // 
             // mONHOCTableAdapter
             // 
             this.mONHOCTableAdapter.ClearBeforeFill = true;
+            // 
+            // scoreManagementDataSetDiem
+            // 
+            this.scoreManagementDataSetDiem.DataSetName = "ScoreManagementDataSetDiem";
+            this.scoreManagementDataSetDiem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dIEMBindingSource
+            // 
+            this.dIEMBindingSource.DataMember = "DIEM";
+            this.dIEMBindingSource.DataSource = this.scoreManagementDataSetDiem;
+            // 
+            // dIEMTableAdapter
+            // 
+            this.dIEMTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Visible = false;
+            this.iDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mAMHDataGridViewTextBoxColumn
+            // 
+            this.mAMHDataGridViewTextBoxColumn.DataPropertyName = "MAMH";
+            this.mAMHDataGridViewTextBoxColumn.HeaderText = "Mã môn học";
+            this.mAMHDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mAMHDataGridViewTextBoxColumn.Name = "mAMHDataGridViewTextBoxColumn";
+            this.mAMHDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // mASVDataGridViewTextBoxColumn
+            // 
+            this.mASVDataGridViewTextBoxColumn.DataPropertyName = "MASV";
+            this.mASVDataGridViewTextBoxColumn.HeaderText = "Mã sinh viên";
+            this.mASVDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mASVDataGridViewTextBoxColumn.Name = "mASVDataGridViewTextBoxColumn";
+            this.mASVDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // cHUYENCANDataGridViewTextBoxColumn
+            // 
+            this.cHUYENCANDataGridViewTextBoxColumn.DataPropertyName = "CHUYENCAN";
+            this.cHUYENCANDataGridViewTextBoxColumn.HeaderText = "Chuyên cần";
+            this.cHUYENCANDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cHUYENCANDataGridViewTextBoxColumn.Name = "cHUYENCANDataGridViewTextBoxColumn";
+            this.cHUYENCANDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // bAITAPDataGridViewTextBoxColumn
+            // 
+            this.bAITAPDataGridViewTextBoxColumn.DataPropertyName = "BAITAP";
+            this.bAITAPDataGridViewTextBoxColumn.HeaderText = "Bài tập";
+            this.bAITAPDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bAITAPDataGridViewTextBoxColumn.Name = "bAITAPDataGridViewTextBoxColumn";
+            this.bAITAPDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // gIUAKIDataGridViewTextBoxColumn
+            // 
+            this.gIUAKIDataGridViewTextBoxColumn.DataPropertyName = "GIUAKI";
+            this.gIUAKIDataGridViewTextBoxColumn.HeaderText = "Giữa kỳ";
+            this.gIUAKIDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.gIUAKIDataGridViewTextBoxColumn.Name = "gIUAKIDataGridViewTextBoxColumn";
+            this.gIUAKIDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // cUOIKIDataGridViewTextBoxColumn
+            // 
+            this.cUOIKIDataGridViewTextBoxColumn.DataPropertyName = "CUOIKI";
+            this.cUOIKIDataGridViewTextBoxColumn.HeaderText = "Cuối kỳ";
+            this.cUOIKIDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cUOIKIDataGridViewTextBoxColumn.Name = "cUOIKIDataGridViewTextBoxColumn";
+            this.cUOIKIDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tONGKETDataGridViewTextBoxColumn
+            // 
+            this.tONGKETDataGridViewTextBoxColumn.DataPropertyName = "TONGKET";
+            this.tONGKETDataGridViewTextBoxColumn.HeaderText = "Tổng kết";
+            this.tONGKETDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tONGKETDataGridViewTextBoxColumn.Name = "tONGKETDataGridViewTextBoxColumn";
+            this.tONGKETDataGridViewTextBoxColumn.Width = 125;
             // 
             // Score
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(968, 450);
+            this.ClientSize = new System.Drawing.Size(1359, 450);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
@@ -187,9 +291,11 @@
             this.Name = "Score";
             this.Text = "Score";
             this.Load += new System.EventHandler(this.Score_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scoreManagementDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scoreManagementDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scoreManagementDataSetDiem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dIEMBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,5 +316,16 @@
         private ScoreManagementDataSet scoreManagementDataSet;
         private System.Windows.Forms.BindingSource mONHOCBindingSource;
         private ScoreManagementDataSetTableAdapters.MONHOCTableAdapter mONHOCTableAdapter;
+        private ScoreManagementDataSetDiem scoreManagementDataSetDiem;
+        private System.Windows.Forms.BindingSource dIEMBindingSource;
+        private ScoreManagementDataSetDiemTableAdapters.DIEMTableAdapter dIEMTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mAMHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mASVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cHUYENCANDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bAITAPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gIUAKIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cUOIKIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tONGKETDataGridViewTextBoxColumn;
     }
 }

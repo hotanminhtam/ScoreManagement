@@ -123,6 +123,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ScoreManagementDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ScoreManagementDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScoreManagementDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreManagementDataSetDiem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScoreManagementDataSetDiem.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Score\Score.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +220,28 @@
     </None>
     <None Include="ScoreManagementDataSet2.xss">
       <DependentUpon>ScoreManagementDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ScoreManagementDataSet3.xsc">
+      <DependentUpon>ScoreManagementDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ScoreManagementDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ScoreManagementDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ScoreManagementDataSet3.xss">
+      <DependentUpon>ScoreManagementDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ScoreManagementDataSetDiem.xsc">
+      <DependentUpon>ScoreManagementDataSetDiem.xsd</DependentUpon>
+    </None>
+    <None Include="ScoreManagementDataSetDiem.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ScoreManagementDataSetDiem.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ScoreManagementDataSetDiem.xss">
+      <DependentUpon>ScoreManagementDataSetDiem.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
