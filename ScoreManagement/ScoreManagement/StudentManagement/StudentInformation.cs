@@ -20,6 +20,14 @@ namespace ScoreManagement.StudentManagement
             this.btnUpdate.Click += BtnUpdate_Click;
             this.btnDelete.Click += BtnDelete_Click;
             this.grdSinhVien.Click += GrdSinhVien_Click;
+            this.grdSinhVien.DoubleClick += GrdSinhVien_DoubleClick;
+        }
+
+        private void GrdSinhVien_DoubleClick(object sender, EventArgs e)
+        {
+            this.Hide();
+            ScoreManagement.Score.Score index = new Score.Score();
+            index.Show();
         }
 
         private void GrdSinhVien_Click(object sender, EventArgs e)
@@ -45,6 +53,13 @@ namespace ScoreManagement.StudentManagement
         private void BtnBack_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private void StudentInformation_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'scoreManagementDataSet2.SVIEN' table. You can move, or remove it, as needed.
+            this.sVIENTableAdapter.Fill(this.scoreManagementDataSet2.SVIEN);
+
         }
     }
 }

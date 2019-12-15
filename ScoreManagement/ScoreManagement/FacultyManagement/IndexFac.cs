@@ -24,5 +24,12 @@ namespace ScoreManagement.FacultyManagement
             ScoreManagement.StudentManagement.StudentInformation index = new StudentManagement.StudentInformation();
             index.Show();
         }
+
+        private void IndexFac_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'scoreManagementDataSet1.NGANH' table. You can move, or remove it, as needed.
+            this.nGANHTableAdapter.Fill(this.scoreManagementDataSet1.NGANH);
+
+        }
     }
 }

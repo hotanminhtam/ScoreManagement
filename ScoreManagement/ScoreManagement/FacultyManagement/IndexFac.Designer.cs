@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnTim = new System.Windows.Forms.Button();
             this.cboNganh = new System.Windows.Forms.ComboBox();
+            this.scoreManagementDataSet1 = new ScoreManagement.ScoreManagementDataSet1();
+            this.nGANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nGANHTableAdapter = new ScoreManagement.ScoreManagementDataSet1TableAdapters.NGANHTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.scoreManagementDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nGANHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,6 +73,8 @@
             // 
             // cboNganh
             // 
+            this.cboNganh.DataSource = this.nGANHBindingSource;
+            this.cboNganh.DisplayMember = "TENNGANH";
             this.cboNganh.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboNganh.FormattingEnabled = true;
             this.cboNganh.Location = new System.Drawing.Point(133, 64);
@@ -74,6 +82,20 @@
             this.cboNganh.Name = "cboNganh";
             this.cboNganh.Size = new System.Drawing.Size(361, 42);
             this.cboNganh.TabIndex = 3;
+            // 
+            // scoreManagementDataSet1
+            // 
+            this.scoreManagementDataSet1.DataSetName = "ScoreManagementDataSet1";
+            this.scoreManagementDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nGANHBindingSource
+            // 
+            this.nGANHBindingSource.DataMember = "NGANH";
+            this.nGANHBindingSource.DataSource = this.scoreManagementDataSet1;
+            // 
+            // nGANHTableAdapter
+            // 
+            this.nGANHTableAdapter.ClearBeforeFill = true;
             // 
             // IndexFac
             // 
@@ -86,6 +108,9 @@
             this.Controls.Add(this.label1);
             this.Name = "IndexFac";
             this.Text = "IndexFac";
+            this.Load += new System.EventHandler(this.IndexFac_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.scoreManagementDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nGANHBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,5 +122,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.ComboBox cboNganh;
+        private ScoreManagementDataSet1 scoreManagementDataSet1;
+        private System.Windows.Forms.BindingSource nGANHBindingSource;
+        private ScoreManagementDataSet1TableAdapters.NGANHTableAdapter nGANHTableAdapter;
     }
 }

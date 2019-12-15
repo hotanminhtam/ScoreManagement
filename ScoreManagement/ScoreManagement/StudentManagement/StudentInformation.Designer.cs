@@ -28,18 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.Button();
             this.grdSinhVien = new System.Windows.Forms.DataGridView();
             this.txtDiaChi = new System.Windows.Forms.RichTextBox();
@@ -59,7 +52,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.scoreManagementDataSet2 = new ScoreManagement.ScoreManagementDataSet2();
+            this.sVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sVIENTableAdapter = new ScoreManagement.ScoreManagementDataSet2TableAdapters.SVIENTableAdapter();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EMAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sDTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdSinhVien)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scoreManagementDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sVIENBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -106,48 +115,6 @@
             this.label9.TabIndex = 41;
             this.label9.Text = "Thông Tin Sinh Viên";
             // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "SDT";
-            this.Column8.Name = "Column8";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Địa chỉ";
-            this.Column7.Name = "Column7";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Quê quán";
-            this.Column6.Name = "Column6";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "CMND";
-            this.Column5.Name = "Column5";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Giới tính";
-            this.Column4.Name = "Column4";
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Ngày sinh";
-            this.Column3.Name = "Column3";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên sinh viên";
-            this.Column2.Name = "Column2";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Mã sinh viên";
-            this.Column1.Name = "Column1";
-            // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Red;
@@ -161,6 +128,7 @@
             // 
             // grdSinhVien
             // 
+            this.grdSinhVien.AutoGenerateColumns = false;
             this.grdSinhVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdSinhVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -169,9 +137,11 @@
             this.Column3,
             this.Column4,
             this.Column5,
+            this.EMAIL,
             this.Column6,
             this.Column7,
-            this.Column8});
+            this.sDTDataGridViewTextBoxColumn});
+            this.grdSinhVien.DataSource = this.sVIENBindingSource;
             this.grdSinhVien.Location = new System.Drawing.Point(6, 266);
             this.grdSinhVien.Name = "grdSinhVien";
             this.grdSinhVien.RowHeadersWidth = 51;
@@ -182,7 +152,7 @@
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(159, 214);
+            this.txtDiaChi.Location = new System.Drawing.Point(141, 177);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(450, 36);
             this.txtDiaChi.TabIndex = 39;
@@ -191,7 +161,7 @@
             // dtpNgaySinh
             // 
             this.dtpNgaySinh.CalendarFont = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dtpNgaySinh.Location = new System.Drawing.Point(598, 92);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(580, 55);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(276, 22);
             this.dtpNgaySinh.TabIndex = 38;
@@ -199,7 +169,7 @@
             // rdbNu
             // 
             this.rdbNu.AutoSize = true;
-            this.rdbNu.Location = new System.Drawing.Point(691, 53);
+            this.rdbNu.Location = new System.Drawing.Point(673, 16);
             this.rdbNu.Name = "rdbNu";
             this.rdbNu.Size = new System.Drawing.Size(47, 21);
             this.rdbNu.TabIndex = 37;
@@ -210,7 +180,7 @@
             // rdbNam
             // 
             this.rdbNam.AutoSize = true;
-            this.rdbNam.Location = new System.Drawing.Point(612, 53);
+            this.rdbNam.Location = new System.Drawing.Point(594, 16);
             this.rdbNam.Name = "rdbNam";
             this.rdbNam.Size = new System.Drawing.Size(58, 21);
             this.rdbNam.TabIndex = 36;
@@ -221,7 +191,7 @@
             // txtSDT
             // 
             this.txtSDT.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtSDT.Location = new System.Drawing.Point(598, 129);
+            this.txtSDT.Location = new System.Drawing.Point(580, 92);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(276, 36);
             this.txtSDT.TabIndex = 35;
@@ -229,7 +199,7 @@
             // txtQueQuan
             // 
             this.txtQueQuan.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtQueQuan.Location = new System.Drawing.Point(159, 172);
+            this.txtQueQuan.Location = new System.Drawing.Point(141, 135);
             this.txtQueQuan.Name = "txtQueQuan";
             this.txtQueQuan.Size = new System.Drawing.Size(276, 36);
             this.txtQueQuan.TabIndex = 34;
@@ -237,7 +207,7 @@
             // txtCMND
             // 
             this.txtCMND.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtCMND.Location = new System.Drawing.Point(159, 128);
+            this.txtCMND.Location = new System.Drawing.Point(141, 91);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(276, 36);
             this.txtCMND.TabIndex = 33;
@@ -245,7 +215,7 @@
             // txtTenSv
             // 
             this.txtTenSv.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenSv.Location = new System.Drawing.Point(159, 83);
+            this.txtTenSv.Location = new System.Drawing.Point(141, 46);
             this.txtTenSv.Name = "txtTenSv";
             this.txtTenSv.Size = new System.Drawing.Size(276, 36);
             this.txtTenSv.TabIndex = 32;
@@ -253,7 +223,7 @@
             // txtMaSv
             // 
             this.txtMaSv.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMaSv.Location = new System.Drawing.Point(159, 41);
+            this.txtMaSv.Location = new System.Drawing.Point(141, 4);
             this.txtMaSv.Name = "txtMaSv";
             this.txtMaSv.Size = new System.Drawing.Size(276, 36);
             this.txtMaSv.TabIndex = 31;
@@ -262,7 +232,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.Location = new System.Drawing.Point(28, 220);
+            this.label8.Location = new System.Drawing.Point(10, 183);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(66, 24);
             this.label8.TabIndex = 30;
@@ -272,7 +242,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(471, 134);
+            this.label7.Location = new System.Drawing.Point(453, 97);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(121, 24);
             this.label7.TabIndex = 29;
@@ -282,7 +252,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(471, 53);
+            this.label6.Location = new System.Drawing.Point(453, 16);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 24);
             this.label6.TabIndex = 28;
@@ -292,7 +262,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(27, 134);
+            this.label5.Location = new System.Drawing.Point(9, 97);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 24);
             this.label5.TabIndex = 27;
@@ -302,7 +272,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(27, 176);
+            this.label4.Location = new System.Drawing.Point(9, 139);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 24);
             this.label4.TabIndex = 26;
@@ -312,7 +282,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(471, 91);
+            this.label3.Location = new System.Drawing.Point(453, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 24);
             this.label3.TabIndex = 25;
@@ -322,7 +292,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(27, 91);
+            this.label2.Location = new System.Drawing.Point(9, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 24);
             this.label2.TabIndex = 24;
@@ -332,11 +302,115 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(27, 53);
+            this.label1.Location = new System.Drawing.Point(9, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 24);
             this.label1.TabIndex = 23;
             this.label1.Text = "Mã sinh viên";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtDiaChi);
+            this.groupBox1.Controls.Add(this.dtpNgaySinh);
+            this.groupBox1.Controls.Add(this.rdbNu);
+            this.groupBox1.Controls.Add(this.rdbNam);
+            this.groupBox1.Controls.Add(this.txtSDT);
+            this.groupBox1.Controls.Add(this.txtQueQuan);
+            this.groupBox1.Controls.Add(this.txtCMND);
+            this.groupBox1.Controls.Add(this.txtTenSv);
+            this.groupBox1.Controls.Add(this.txtMaSv);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 41);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(905, 225);
+            this.groupBox1.TabIndex = 46;
+            this.groupBox1.TabStop = false;
+            // 
+            // scoreManagementDataSet2
+            // 
+            this.scoreManagementDataSet2.DataSetName = "ScoreManagementDataSet2";
+            this.scoreManagementDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sVIENBindingSource
+            // 
+            this.sVIENBindingSource.DataMember = "SVIEN";
+            this.sVIENBindingSource.DataSource = this.scoreManagementDataSet2;
+            // 
+            // sVIENTableAdapter
+            // 
+            this.sVIENTableAdapter.ClearBeforeFill = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MASV";
+            this.Column1.HeaderText = "Mã sinh viên";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TENSV";
+            this.Column2.HeaderText = "Tên sinh viên";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "NGAYSINH";
+            this.Column3.HeaderText = "Ngày sinh";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "GIOITINH";
+            this.Column4.HeaderText = "Giới tính";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "CMND";
+            this.Column5.HeaderText = "CMND";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            // 
+            // EMAIL
+            // 
+            this.EMAIL.DataPropertyName = "EMAIL";
+            this.EMAIL.HeaderText = "Email";
+            this.EMAIL.MinimumWidth = 6;
+            this.EMAIL.Name = "EMAIL";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "QUEQUAN";
+            this.Column6.HeaderText = "Quê quán";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "DIACHI";
+            this.Column7.HeaderText = "Địa chỉ";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            // 
+            // sDTDataGridViewTextBoxColumn
+            // 
+            this.sDTDataGridViewTextBoxColumn.DataPropertyName = "SDT";
+            this.sDTDataGridViewTextBoxColumn.HeaderText = "SDT";
+            this.sDTDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sDTDataGridViewTextBoxColumn.Name = "sDTDataGridViewTextBoxColumn";
             // 
             // StudentInformation
             // 
@@ -344,33 +418,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1075, 545);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.grdSinhVien);
-            this.Controls.Add(this.txtDiaChi);
-            this.Controls.Add(this.dtpNgaySinh);
-            this.Controls.Add(this.rdbNu);
-            this.Controls.Add(this.rdbNam);
-            this.Controls.Add(this.txtSDT);
-            this.Controls.Add(this.txtQueQuan);
-            this.Controls.Add(this.txtCMND);
-            this.Controls.Add(this.txtTenSv);
-            this.Controls.Add(this.txtMaSv);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "StudentInformation";
             this.Text = "StudentInformation";
+            this.Load += new System.EventHandler(this.StudentInformation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdSinhVien)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scoreManagementDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sVIENBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,14 +445,6 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView grdSinhVien;
         private System.Windows.Forms.RichTextBox txtDiaChi;
@@ -409,5 +464,18 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private ScoreManagementDataSet2 scoreManagementDataSet2;
+        private System.Windows.Forms.BindingSource sVIENBindingSource;
+        private ScoreManagementDataSet2TableAdapters.SVIENTableAdapter sVIENTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EMAIL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sDTDataGridViewTextBoxColumn;
     }
 }
