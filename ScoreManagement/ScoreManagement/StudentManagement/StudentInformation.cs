@@ -12,9 +12,11 @@ namespace ScoreManagement.StudentManagement
 {
     public partial class StudentInformation : Form
     {
+        private Logic Business;
         public StudentInformation()
         {
             InitializeComponent();
+            this.Business = new Logic();
             this.Load += StudentInformation_Load1;
             this.btnBack.Click += BtnBack_Click;
             this.btnSave.Click += BtnSave_Click;
@@ -49,17 +51,32 @@ namespace ScoreManagement.StudentManagement
 
         private void StudentInformation_Load1(object sender, EventArgs e)
         {
-            //throw new NotImplementedException();
+            this.LoadAllStudent();
+        }
+
+        private void LoadAllStudent()
+        {
+            var std = this.Business.GetSVIENs();
+            this.grdSinhVien.DataSource = std;
         }
 
         private void GrdSinhVien_DoubleClick(object sender, EventArgs e)
         {
-            
+            new Score.Score().ShowDialog();
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if(this.grdSinhVien.SelectedRows.Count == 1)
+            {
+                if(MessageBox.Show("Do you want delete?", "Comfirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    var sv = (SVIEN)this.grdSinhVien.SelectedRows[0].DataBoundItem;
+                    this.Business.DeleteStudent(sv.ID);
+                    MessageBox.Show("Delete successfully!");
+                    this.LoadAllStudent();
+                }
+            }
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)
