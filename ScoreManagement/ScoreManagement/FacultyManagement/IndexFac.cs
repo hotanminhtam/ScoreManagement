@@ -21,9 +21,9 @@ namespace ScoreManagement.FacultyManagement
         private void BtnTim_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ScoreManagement.StudentManagement.StudentInformation index = new StudentManagement.StudentInformation();
+            ScoreManagement.StudentManagement.StudentInformation index = new StudentManagement.StudentInformation(cboNganh.SelectedValue.ToString());
+            index.Owner = this;
             index.Show();
-            
         }
 
         private void IndexFac_Load(object sender, EventArgs e)

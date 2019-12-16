@@ -13,10 +13,12 @@ namespace ScoreManagement.StudentManagement
     public partial class StudentInformation : Form
     {
         private Logic Business;
-        public StudentInformation()
+        string nganh;
+        public StudentInformation(string nganh)
         {
             InitializeComponent();
             this.Business = new Logic();
+            this.nganh = nganh;
             this.Load += StudentInformation_Load1;
             this.btnBack.Click += BtnBack_Click;
             this.btnSave.Click += BtnSave_Click;
@@ -56,7 +58,8 @@ namespace ScoreManagement.StudentManagement
 
         private void LoadAllStudent()
         {
-            var std = this.Business.GetSVIENs();
+            MessageBox.Show(nganh);
+            var std = this.Business.GetStudentsOfFaculty(nganh);
             this.grdSinhVien.DataSource = std;
         }
 

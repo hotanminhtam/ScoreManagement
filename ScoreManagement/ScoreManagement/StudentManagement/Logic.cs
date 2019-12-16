@@ -65,5 +65,18 @@ namespace ScoreManagement.StudentManagement
             db.SVIENs.Remove(student);
             db.SaveChanges();
         }
+
+        public SVIEN[] GetStudentsOfFaculty(string faculty)
+        {
+            var db = new ScoreManagementEntities();
+            var id = GetFaculty(faculty);
+            return db.SVIENs.Where(item => item.MANGANH.Equals(id)).ToArray();
+        }
+
+        private int GetFaculty(string tenNghanh)
+        {
+            var db = new ScoreManagementEntities();
+            return db.NGANHs.Where(item => item.TENNGANH.Equals(tenNghanh)).FirstOrDefault().MANGANH;
+        }
     }
 }
