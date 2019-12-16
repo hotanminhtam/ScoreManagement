@@ -30,6 +30,8 @@ namespace ScoreManagement.StudentManagement
             if (this.grdSinhVien.SelectedRows.Count == 1)
             {
                 txtMaSv.Text = this.grdSinhVien.SelectedRows[0].Cells[0].Value.ToString();
+                txtTenSv.Text = this.grdSinhVien.SelectedRows[0].Cells[1].Value.ToString();
+                dtpNgaySinh.Value = DateTime.Parse(this.grdSinhVien.SelectedRows[0].Cells[3].Value.ToString());
                 if (bool.Parse(this.grdSinhVien.SelectedRows[0].Cells[4].Value.ToString()) == true)
                 {
                     rdbNam.Checked = true;
@@ -38,7 +40,10 @@ namespace ScoreManagement.StudentManagement
                 {
                     rdbNu.Checked = true;
                 }
-                dtpNgaySinh.Value = DateTime.Parse(this.grdSinhVien.SelectedRows[0].Cells[3].Value.ToString());
+                txtCMND.Text = this.grdSinhVien.SelectedRows[0].Cells[5].Value.ToString();
+                txtQueQuan.Text = this.grdSinhVien.SelectedRows[0].Cells[7].Value.ToString();
+                txtDiaChi.Text = this.grdSinhVien.SelectedRows[0].Cells[8].Value.ToString();
+                txtSDT.Text = this.grdSinhVien.SelectedRows[0].Cells[9].Value.ToString();
             }
         }
 
@@ -64,6 +69,7 @@ namespace ScoreManagement.StudentManagement
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
