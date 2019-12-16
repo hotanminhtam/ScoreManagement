@@ -23,6 +23,7 @@ namespace ScoreManagement.FacultyManagement
             this.Hide();
             ScoreManagement.StudentManagement.StudentInformation index = new StudentManagement.StudentInformation();
             index.Show();
+            
         }
 
         private void IndexFac_Load(object sender, EventArgs e)

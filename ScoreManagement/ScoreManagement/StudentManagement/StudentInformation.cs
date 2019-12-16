@@ -15,24 +15,41 @@ namespace ScoreManagement.StudentManagement
         public StudentInformation()
         {
             InitializeComponent();
+            this.Load += StudentInformation_Load1;
             this.btnBack.Click += BtnBack_Click;
             this.btnSave.Click += BtnSave_Click;
             this.btnUpdate.Click += BtnUpdate_Click;
             this.btnDelete.Click += BtnDelete_Click;
-            this.grdSinhVien.Click += GrdSinhVien_Click;
             this.grdSinhVien.DoubleClick += GrdSinhVien_DoubleClick;
+            this.grdSinhVien.SelectionChanged += GrdSinhVien_SelectionChanged;
+            this.grdSinhVien.AllowUserToAddRows = false;
+        }
+
+        private void GrdSinhVien_SelectionChanged(object sender, EventArgs e)
+        {
+            if (this.grdSinhVien.SelectedRows.Count == 1)
+            {
+                txtMaSv.Text = this.grdSinhVien.SelectedRows[0].Cells[0].Value.ToString();
+                if (bool.Parse(this.grdSinhVien.SelectedRows[0].Cells[4].Value.ToString()) == true)
+                {
+                    rdbNam.Checked = true;
+                }
+                else
+                {
+                    rdbNu.Checked = true;
+                }
+                dtpNgaySinh.Value = DateTime.Parse(this.grdSinhVien.SelectedRows[0].Cells[3].Value.ToString());
+            }
+        }
+
+        private void StudentInformation_Load1(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
         }
 
         private void GrdSinhVien_DoubleClick(object sender, EventArgs e)
         {
             
-        }
-
-        private void GrdSinhVien_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ScoreManagement.Score.Score index = new Score.Score();
-            index.Show();
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -47,7 +64,6 @@ namespace ScoreManagement.StudentManagement
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
         }
 
         private void BtnBack_Click(object sender, EventArgs e)

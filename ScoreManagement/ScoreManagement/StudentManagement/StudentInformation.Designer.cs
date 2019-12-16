@@ -160,6 +160,7 @@
             this.grdSinhVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdSinhVien.Size = new System.Drawing.Size(1053, 271);
             this.grdSinhVien.TabIndex = 40;
+            this.grdSinhVien.ReadOnly = true;
             // 
             // txtDiaChi
             // 
