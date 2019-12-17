@@ -75,7 +75,7 @@ namespace ScoreManagement.StudentManagement
                 if(MessageBox.Show("Do you want delete?", "Comfirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     var sv = (SVIEN)this.grdSinhVien.SelectedRows[0].DataBoundItem;
-                    this.Business.DeleteStudent(sv.ID);
+                    this.Business.DeleteStudent(sv.MASV);
                     MessageBox.Show("Delete successfully!");
                     this.LoadAllStudent();
                 }

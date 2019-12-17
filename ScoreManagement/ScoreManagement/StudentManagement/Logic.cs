@@ -13,10 +13,10 @@ namespace ScoreManagement.StudentManagement
             var db = new ScoreManagementEntities();
             return db.SVIENs.ToArray();
         }
-        public SVIEN GetSVIEN(int id)
+        public SVIEN GetSVIEN(int masv)
         {
             var db = new ScoreManagementEntities();
-            return db.SVIENs.Find(id);
+            return db.SVIENs.Find(masv);
         }
         public void CreateStudents(int manganh, string masv, string tensv, DateTime ngaysinh,
                                     bool gioitinh, string sdt, string email, int cmnd, string quequan, string diachi)
@@ -41,7 +41,7 @@ namespace ScoreManagement.StudentManagement
                                     bool gioitinh, string sdt, string email, int cmnd, string quequan, string diachi)
         {
             var db = new ScoreManagementEntities();
-            var student = db.SVIENs.Find(id);
+            var student = db.SVIENs.Find(masv);
 
             student.MANGANH = manganh;
             student.MASV = masv;
@@ -57,10 +57,10 @@ namespace ScoreManagement.StudentManagement
             db.Entry(student).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
         }
-        public void DeleteStudent(int id)
+        public void DeleteStudent(string masv)
         {
             var db = new ScoreManagementEntities();
-            var student = db.SVIENs.Find(id);
+            var student = db.SVIENs.Find(masv);
 
             db.SVIENs.Remove(student);
             db.SaveChanges();
