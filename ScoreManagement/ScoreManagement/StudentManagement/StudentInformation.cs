@@ -46,6 +46,7 @@ namespace ScoreManagement.StudentManagement
                     rdbNu.Checked = true;
                 }
                 txtCMND.Text = this.grdSinhVien.SelectedRows[0].Cells[5].Value.ToString();
+                txtEmail.Text = this.grdSinhVien.SelectedRows[0].Cells[6].Value.ToString();
                 txtQueQuan.Text = this.grdSinhVien.SelectedRows[0].Cells[7].Value.ToString();
                 txtDiaChi.Text = this.grdSinhVien.SelectedRows[0].Cells[8].Value.ToString();
                 txtSDT.Text = this.grdSinhVien.SelectedRows[0].Cells[9].Value.ToString();
