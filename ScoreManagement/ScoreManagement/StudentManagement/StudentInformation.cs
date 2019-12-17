@@ -78,7 +78,7 @@ namespace ScoreManagement.StudentManagement
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -104,7 +104,7 @@ namespace ScoreManagement.StudentManagement
 
             this.Business.CreateStudents(manganh, masv, tensv, ngaysinh, gioitinh, sdt, email, cmnd, quequan, diachi);
             MessageBox.Show("Create student successfully!");
-
+            this.LoadAllStudent();
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
