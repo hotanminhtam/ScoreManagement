@@ -24,7 +24,6 @@ namespace ScoreManagement.StudentManagement
             this.btnSave.Click += BtnSave_Click;
             this.btnUpdate.Click += BtnUpdate_Click;
             this.btnDelete.Click += BtnDelete_Click;
-            this.grdSinhVien.DoubleClick += GrdSinhVien_DoubleClick;
             this.grdSinhVien.SelectionChanged += GrdSinhVien_SelectionChanged;
             this.grdSinhVien.AllowUserToAddRows = false;
         }
@@ -63,11 +62,6 @@ namespace ScoreManagement.StudentManagement
             this.grdSinhVien.DataSource = std;
         }
 
-        private void GrdSinhVien_DoubleClick(object sender, EventArgs e)
-        {
-            new Score.Score().ShowDialog();
-        }
-
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             if(this.grdSinhVien.SelectedRows.Count == 1)
@@ -92,7 +86,15 @@ namespace ScoreManagement.StudentManagement
             var manganh = int.Parse(this.cboMaNganh.Text);
             var masv = this.txtMaSv.Text;
             var tensv = this.txtTenSv.Text;
-
+            var gioitinh = "";
+            if(this.rdbNam.Checked == true)
+            {
+                gioitinh = "Nam";
+            }
+            if(this.rdbNu.Checked == true)
+            {
+                gioitinh = "Nữ";
+            }
             var ngaysinh = this.dtpNgaySinh.Value;
             var sdt = this.txtSDT.Text;
             var email = this.txtEmail.Text;
@@ -100,7 +102,7 @@ namespace ScoreManagement.StudentManagement
             var quequan = this.txtQueQuan.Text;
             var diachi = this.txtDiaChi.Text;
 
-         //   this.Business.CreateStudents(manganh, masv, tensv, ngaysinh, gioitinh, sdt, email, cmnd, quequan, diachi);
+            this.Business.CreateStudents(manganh, masv, tensv, ngaysinh, gioitinh, sdt, email, cmnd, quequan, diachi);
             MessageBox.Show("Create student successfully!");
 
         }

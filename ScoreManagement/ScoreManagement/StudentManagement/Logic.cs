@@ -19,7 +19,7 @@ namespace ScoreManagement.StudentManagement
             return db.SVIENs.Find(masv);
         }
         public void CreateStudents(int manganh, string masv, string tensv, DateTime ngaysinh,
-                                    bool gioitinh, string sdt, string email, int cmnd, string quequan, string diachi)
+                                    string gioitinh, string sdt, string email, int cmnd, string quequan, string diachi)
         {
             var student = new SVIEN();
             student.MANGANH = manganh;
@@ -38,7 +38,7 @@ namespace ScoreManagement.StudentManagement
             db.SaveChanges();
         }
         public void UpdateStudent(int id, int manganh, string masv, string tensv, DateTime ngaysinh,
-                                    bool gioitinh, string sdt, string email, int cmnd, string quequan, string diachi)
+                                    string gioitinh, string sdt, string email, int cmnd, string quequan, string diachi)
         {
             var db = new ScoreManagementEntities();
             var student = db.SVIENs.Find(masv);

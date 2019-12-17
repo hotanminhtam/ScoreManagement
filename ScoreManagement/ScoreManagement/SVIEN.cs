@@ -14,17 +14,11 @@ namespace ScoreManagement
     
     public partial class SVIEN
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public SVIEN()
-        {
-            this.DIEMs = new HashSet<DIEM>();
-        }
-    
         public int ID { get; set; }
         public int MANGANH { get; set; }
         public string MASV { get; set; }
         public string TENSV { get; set; }
-        public Nullable<bool> GIOITINH { get; set; }
+        public string GIOITINH { get; set; }
         public Nullable<System.DateTime> NGAYSINH { get; set; }
         public string SDT { get; set; }
         public string EMAIL { get; set; }
@@ -32,7 +26,6 @@ namespace ScoreManagement
         public string QUEQUAN { get; set; }
         public string DIACHI { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DIEM> DIEMs { get; set; }
+        public virtual NGANH NGANH { get; set; }
     }
 }

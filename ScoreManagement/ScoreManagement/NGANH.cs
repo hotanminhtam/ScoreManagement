@@ -17,7 +17,7 @@ namespace ScoreManagement
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NGANH()
         {
-            this.MONHOCs = new HashSet<MONHOC>();
+            this.SVIENs = new HashSet<SVIEN>();
         }
     
         public int ID { get; set; }
@@ -25,6 +25,6 @@ namespace ScoreManagement
         public string TENNGANH { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MONHOC> MONHOCs { get; set; }
+        public virtual ICollection<SVIEN> SVIENs { get; set; }
     }
 }

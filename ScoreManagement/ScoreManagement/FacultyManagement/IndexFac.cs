@@ -22,8 +22,8 @@ namespace ScoreManagement.FacultyManagement
         {
             this.Hide();
             ScoreManagement.StudentManagement.StudentInformation index = new StudentManagement.StudentInformation(cboNganh.SelectedValue.ToString());
-            index.Owner = this;
             index.Show();
+            index.Owner = this;
         }
 
         private void IndexFac_Load(object sender, EventArgs e)

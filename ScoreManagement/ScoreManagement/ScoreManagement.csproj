@@ -70,9 +70,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DIEM.cs">
-      <DependentUpon>Models.tt</DependentUpon>
-    </Compile>
     <Compile Include="FacultyManagement\IndexFac.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,9 +96,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Models.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="MONHOC.cs">
-      <DependentUpon>Models.tt</DependentUpon>
     </Compile>
     <Compile Include="NGANH.cs">
       <DependentUpon>Models.tt</DependentUpon>
@@ -133,12 +127,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ScoreManagementDataSetDiem.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Score\Score.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Score\Score.Designer.cs">
-      <DependentUpon>Score.cs</DependentUpon>
-    </Compile>
     <Compile Include="StudentManagement\Logic.cs" />
     <Compile Include="StudentManagement\StudentInformation.cs">
       <SubType>Form</SubType>
@@ -165,9 +153,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Score\Score.resx">
-      <DependentUpon>Score.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="StudentManagement\StudentInformation.resx">
       <DependentUpon>StudentInformation.cs</DependentUpon>
     </EmbeddedResource>
