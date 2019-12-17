@@ -28,14 +28,16 @@ namespace ScoreManagement.StudentManagement
             this.grdSinhVien.AllowUserToAddRows = false;
         }
 
+
         private void GrdSinhVien_SelectionChanged(object sender, EventArgs e)
         {
             if (this.grdSinhVien.SelectedRows.Count == 1)
             {
+                txtMaSv.ReadOnly = true;
                 txtMaSv.Text = this.grdSinhVien.SelectedRows[0].Cells[0].Value.ToString();
                 txtTenSv.Text = this.grdSinhVien.SelectedRows[0].Cells[2].Value.ToString();
                 dtpNgaySinh.Value = DateTime.Parse(this.grdSinhVien.SelectedRows[0].Cells[3].Value.ToString());
-                if (bool.Parse(this.grdSinhVien.SelectedRows[0].Cells[4].Value.ToString()) == true)
+                if (this.grdSinhVien.SelectedRows[0].Cells[4].Value.ToString().ToLower().Equals("nam"))
                 {
                     rdbNam.Checked = true;
                 }
@@ -48,6 +50,10 @@ namespace ScoreManagement.StudentManagement
                 txtDiaChi.Text = this.grdSinhVien.SelectedRows[0].Cells[8].Value.ToString();
                 txtSDT.Text = this.grdSinhVien.SelectedRows[0].Cells[9].Value.ToString();
             }
+            else
+            {
+                txtMaSv.ReadOnly = false;
+            }
         }
 
         private void StudentInformation_Load1(object sender, EventArgs e)
@@ -57,7 +63,6 @@ namespace ScoreManagement.StudentManagement
 
         private void LoadAllStudent()
         {
-            MessageBox.Show(nganh);
             var std = this.Business.GetStudentsOfFaculty(nganh);
             this.grdSinhVien.DataSource = std;
         }
@@ -72,13 +77,36 @@ namespace ScoreManagement.StudentManagement
                     this.Business.DeleteStudent(sv.MASV);
                     MessageBox.Show("Delete successfully!");
                     this.LoadAllStudent();
+
                 }
             }
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            
+            var manganh = int.Parse(this.cboMaNganh.Text);
+            var masv = this.txtMaSv.Text;
+            var tensv = this.txtTenSv.Text;
+            var gioitinh = "";
+            if (this.rdbNam.Checked == true)
+            {
+                gioitinh = "Nam";
+            }
+            if (this.rdbNu.Checked == true)
+            {
+                gioitinh = "Nữ";
+            }
+            var ngaysinh = this.dtpNgaySinh.Value;
+            var sdt = this.txtSDT.Text;
+            var email = this.txtEmail.Text;
+            var cmnd = int.Parse(this.txtCMND.Text);
+            var quequan = this.txtQueQuan.Text;
+            var diachi = this.txtDiaChi.Text;
+
+            this.Business.UpdateStudent(manganh, masv, tensv, ngaysinh, gioitinh, sdt, email, cmnd, quequan, diachi);
+            MessageBox.Show("Update student successfully!");
+            this.LoadAllStudent();
+            this.grdSinhVien.ClearSelection();
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -105,6 +133,7 @@ namespace ScoreManagement.StudentManagement
             this.Business.CreateStudents(manganh, masv, tensv, ngaysinh, gioitinh, sdt, email, cmnd, quequan, diachi);
             MessageBox.Show("Create student successfully!");
             this.LoadAllStudent();
+            this.grdSinhVien.ClearSelection();
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
@@ -117,10 +146,10 @@ namespace ScoreManagement.StudentManagement
 
         private void StudentInformation_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'scoreManagementDataSet4.SVIEN' table. You can move, or remove it, as needed.
+            this.sVIENTableAdapter1.Fill(this.scoreManagementDataSet4.SVIEN);
             // TODO: This line of code loads data into the 'scoreManagementDataSet3.NGANH' table. You can move, or remove it, as needed.
             this.nGANHTableAdapter.Fill(this.scoreManagementDataSet3.NGANH);
-            // TODO: This line of code loads data into the 'scoreManagementDataSet2.SVIEN' table. You can move, or remove it, as needed.
-            this.sVIENTableAdapter.Fill(this.scoreManagementDataSet2.SVIEN);
 
         }
     }

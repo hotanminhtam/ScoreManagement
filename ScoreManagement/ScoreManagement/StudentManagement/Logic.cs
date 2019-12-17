@@ -37,7 +37,7 @@ namespace ScoreManagement.StudentManagement
             db.SVIENs.Add(student);
             db.SaveChanges();
         }
-        public void UpdateStudent(int id, int manganh, string masv, string tensv, DateTime ngaysinh,
+        public void UpdateStudent(int manganh, string masv, string tensv, DateTime ngaysinh,
                                     string gioitinh, string sdt, string email, int cmnd, string quequan, string diachi)
         {
             var db = new ScoreManagementEntities();

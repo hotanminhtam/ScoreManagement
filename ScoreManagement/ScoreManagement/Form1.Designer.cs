@@ -62,7 +62,8 @@
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Quản lý điểm sinh viên";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quản lý sinh viên";
             this.ResumeLayout(false);
             this.PerformLayout();
 

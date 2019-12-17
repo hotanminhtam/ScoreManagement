@@ -45,9 +45,11 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sDTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sVIENBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.scoreManagementDataSet4 = new ScoreManagement.ScoreManagementDataSet4();
             this.sVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.scoreManagementDataSet2 = new ScoreManagement.ScoreManagementDataSet2();
-            this.txtDiaChi = new System.Windows.Forms.RichTextBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.rdbNu = new System.Windows.Forms.RadioButton();
             this.rdbNam = new System.Windows.Forms.RadioButton();
@@ -74,7 +76,10 @@
             this.sVIENTableAdapter = new ScoreManagement.ScoreManagementDataSet2TableAdapters.SVIENTableAdapter();
             this.scoreManagementDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nGANHTableAdapter = new ScoreManagement.ScoreManagementDataSet3TableAdapters.NGANHTableAdapter();
+            this.sVIENTableAdapter1 = new ScoreManagement.ScoreManagementDataSet4TableAdapters.SVIENTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.grdSinhVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sVIENBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scoreManagementDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sVIENBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoreManagementDataSet2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -160,7 +165,7 @@
             this.Column6,
             this.Column7,
             this.sDTDataGridViewTextBoxColumn});
-            this.grdSinhVien.DataSource = this.sVIENBindingSource;
+            this.grdSinhVien.DataSource = this.sVIENBindingSource1;
             this.grdSinhVien.Location = new System.Drawing.Point(26, 329);
             this.grdSinhVien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grdSinhVien.Name = "grdSinhVien";
@@ -177,7 +182,7 @@
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 122;
+            this.Column1.Width = 132;
             // 
             // MANGANH
             // 
@@ -186,7 +191,7 @@
             this.MANGANH.MinimumWidth = 6;
             this.MANGANH.Name = "MANGANH";
             this.MANGANH.ReadOnly = true;
-            this.MANGANH.Width = 107;
+            this.MANGANH.Width = 116;
             // 
             // Column2
             // 
@@ -263,6 +268,16 @@
             this.sDTDataGridViewTextBoxColumn.ReadOnly = true;
             this.sDTDataGridViewTextBoxColumn.Width = 77;
             // 
+            // sVIENBindingSource1
+            // 
+            this.sVIENBindingSource1.DataMember = "SVIEN";
+            this.sVIENBindingSource1.DataSource = this.scoreManagementDataSet4;
+            // 
+            // scoreManagementDataSet4
+            // 
+            this.scoreManagementDataSet4.DataSetName = "ScoreManagementDataSet4";
+            this.scoreManagementDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // sVIENBindingSource
             // 
             this.sVIENBindingSource.DataMember = "SVIEN";
@@ -275,12 +290,13 @@
             // 
             // txtDiaChi
             // 
+            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(159, 221);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(506, 44);
+            this.txtDiaChi.Size = new System.Drawing.Size(506, 39);
             this.txtDiaChi.TabIndex = 39;
-            this.txtDiaChi.Text = "";
+            this.txtDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // dtpNgaySinh
             // 
@@ -326,6 +342,7 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(310, 41);
             this.txtSDT.TabIndex = 35;
+            this.txtSDT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtQueQuan
             // 
@@ -335,6 +352,7 @@
             this.txtQueQuan.Name = "txtQueQuan";
             this.txtQueQuan.Size = new System.Drawing.Size(310, 41);
             this.txtQueQuan.TabIndex = 34;
+            this.txtQueQuan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtCMND
             // 
@@ -344,6 +362,7 @@
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(310, 41);
             this.txtCMND.TabIndex = 33;
+            this.txtCMND.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtTenSv
             // 
@@ -353,6 +372,7 @@
             this.txtTenSv.Name = "txtTenSv";
             this.txtTenSv.Size = new System.Drawing.Size(310, 41);
             this.txtTenSv.TabIndex = 32;
+            this.txtTenSv.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtMaSv
             // 
@@ -362,6 +382,7 @@
             this.txtMaSv.Name = "txtMaSv";
             this.txtMaSv.Size = new System.Drawing.Size(310, 41);
             this.txtMaSv.TabIndex = 31;
+            this.txtMaSv.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label8
             // 
@@ -482,6 +503,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(310, 41);
             this.txtEmail.TabIndex = 43;
+            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label11
             // 
@@ -538,6 +560,10 @@
             // 
             this.nGANHTableAdapter.ClearBeforeFill = true;
             // 
+            // sVIENTableAdapter1
+            // 
+            this.sVIENTableAdapter1.ClearBeforeFill = true;
+            // 
             // StudentInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -554,9 +580,12 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "StudentInformation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentInformation";
             this.Load += new System.EventHandler(this.StudentInformation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdSinhVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sVIENBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scoreManagementDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sVIENBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoreManagementDataSet2)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -577,7 +606,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView grdSinhVien;
-        private System.Windows.Forms.RichTextBox txtDiaChi;
+        private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.RadioButton rdbNu;
         private System.Windows.Forms.RadioButton rdbNam;
@@ -616,5 +645,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sDTDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label11;
+        private ScoreManagementDataSet4 scoreManagementDataSet4;
+        private System.Windows.Forms.BindingSource sVIENBindingSource1;
+        private ScoreManagementDataSet4TableAdapters.SVIENTableAdapter sVIENTableAdapter1;
     }
 }

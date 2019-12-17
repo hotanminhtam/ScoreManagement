@@ -122,6 +122,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ScoreManagementDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ScoreManagementDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScoreManagementDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ScoreManagementDataSetDiem.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -217,6 +222,17 @@
     <None Include="ScoreManagementDataSet3.xss">
       <DependentUpon>ScoreManagementDataSet3.xsd</DependentUpon>
     </None>
+    <None Include="ScoreManagementDataSet4.xsc">
+      <DependentUpon>ScoreManagementDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ScoreManagementDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ScoreManagementDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ScoreManagementDataSet4.xss">
+      <DependentUpon>ScoreManagementDataSet4.xsd</DependentUpon>
+    </None>
     <None Include="ScoreManagementDataSetDiem.xsc">
       <DependentUpon>ScoreManagementDataSetDiem.xsd</DependentUpon>
     </None>
@@ -244,11 +260,11 @@
       <LastGenOutput>Models.cs</LastGenOutput>
     </Content>
     <Content Include="ScoreManagement.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="ScoreManagement_log.ldf">
       <DependentUpon>ScoreManagement.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\pngtree-flat-cartoon-training-learning-banner-image_182834.jpg" />
   </ItemGroup>

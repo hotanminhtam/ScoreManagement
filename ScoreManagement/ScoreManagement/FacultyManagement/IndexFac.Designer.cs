@@ -75,9 +75,9 @@
             // 
             this.cboNganh.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cboNganh.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboNganh.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.nGANHBindingSource, "TENNGANH", true));
             this.cboNganh.DataSource = this.nGANHBindingSource;
             this.cboNganh.DisplayMember = "TENNGANH";
+            this.cboNganh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboNganh.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboNganh.FormattingEnabled = true;
             this.cboNganh.Location = new System.Drawing.Point(150, 80);
@@ -112,6 +112,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "IndexFac";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IndexFac";
             this.Load += new System.EventHandler(this.IndexFac_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nGANHBindingSource)).EndInit();
