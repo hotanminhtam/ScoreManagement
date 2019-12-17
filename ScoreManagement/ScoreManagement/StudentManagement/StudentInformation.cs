@@ -34,7 +34,7 @@ namespace ScoreManagement.StudentManagement
             if (this.grdSinhVien.SelectedRows.Count == 1)
             {
                 txtMaSv.Text = this.grdSinhVien.SelectedRows[0].Cells[0].Value.ToString();
-                txtTenSv.Text = this.grdSinhVien.SelectedRows[0].Cells[1].Value.ToString();
+                txtTenSv.Text = this.grdSinhVien.SelectedRows[0].Cells[2].Value.ToString();
                 dtpNgaySinh.Value = DateTime.Parse(this.grdSinhVien.SelectedRows[0].Cells[3].Value.ToString());
                 if (bool.Parse(this.grdSinhVien.SelectedRows[0].Cells[4].Value.ToString()) == true)
                 {
@@ -89,6 +89,19 @@ namespace ScoreManagement.StudentManagement
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            var manganh = int.Parse(this.cboMaNganh.Text);
+            var masv = this.txtMaSv.Text;
+            var tensv = this.txtTenSv.Text;
+
+            var ngaysinh = this.dtpNgaySinh.Value;
+            var sdt = this.txtSDT.Text;
+            var email = this.txtEmail.Text;
+            var cmnd = int.Parse(this.txtCMND.Text);
+            var quequan = this.txtQueQuan.Text;
+            var diachi = this.txtDiaChi.Text;
+
+         //   this.Business.CreateStudents(manganh, masv, tensv, ngaysinh, gioitinh, sdt, email, cmnd, quequan, diachi);
+            MessageBox.Show("Create student successfully!");
 
         }
 
